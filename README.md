@@ -2,6 +2,14 @@
 
 **Mission-conditioned semantic communication for UAV visual uplinks.**
 
+<p>
+<img src="https://img.shields.io/badge/paper-IEEE%20OJVT%20%C2%B7%20under%20review-0B6A66?style=flat-square" alt="paper: IEEE OJVT · under review">
+<img src="https://img.shields.io/badge/dataset-VisDrone-0B6A66?style=flat-square" alt="dataset: VisDrone">
+<img src="https://img.shields.io/badge/unit%20tests-594-0B6A66?style=flat-square" alt="unit tests: 594">
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-0B6A66?style=flat-square" alt="license: MIT"></a>
+<a href="https://mustafanfj.github.io"><img src="https://img.shields.io/badge/author-Mustafa%20Al%20Juboori-17202A?style=flat-square" alt="author: Mustafa Al Juboori"></a>
+</p>
+
 SemUAV-VLM turns every UAV camera frame into the *least costly message that still lets
 the ground station take the right action on time*. On board, a detector grounds the
 frame in a verifiable semantic state (`semuav.v1`). A causal selector then picks one of
