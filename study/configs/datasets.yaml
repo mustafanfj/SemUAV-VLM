@@ -1,0 +1,85 @@
+schema_version: 1
+
+# This registry records publisher-controlled entry points. Raw datasets are
+# never bundled with the project. The acquisition code resolves mutable remote
+# revisions to immutable receipts before scientific use.
+datasets:
+  visdrone:
+    title: VisDrone2019
+    role: Primary urban object detection and tracking evidence
+    provider: Official VisDrone GitHub release index and Google Drive files
+    landing_page: https://github.com/VisDrone/VisDrone-Dataset
+    destination: VisDrone
+    license: CC BY-NC-SA 3.0 / academic and noncommercial use; review current publisher terms
+    estimated_download_gb: 13.0
+    confirmation_note: Use labeled train, validation, and test-dev only; challenge-test labels are unavailable.
+    components:
+      - name: det_train
+        archive: VisDrone2019-DET-train.zip
+        google_drive_id: 1a2oHjcEcwXP8oUF95qiwrqzACb2YlUhn
+      - name: det_val
+        archive: VisDrone2019-DET-val.zip
+        google_drive_id: 1bxK5zgLn0_L8x276eKkuYA_FzwCIjb59
+      - name: det_test_dev
+        archive: VisDrone2019-DET-test-dev.zip
+        google_drive_id: 1PFdW_VFSCfZ_sTSZAGjQdifF_Xd5mf0V
+      - name: mot_train
+        archive: VisDrone2019-MOT-train.zip
+        google_drive_id: 1-qX2d-P1Xr64ke6nTdlm33om1VxCUTSh
+      - name: mot_val
+        archive: VisDrone2019-MOT-val.zip
+        google_drive_id: 1rqnKe9IgU_crMaxRoel9_nuUsMEBBVQu
+      - name: mot_test_dev
+        archive: VisDrone2019-MOT-test-dev.zip
+        google_drive_id: 14z8Acxopj1d86-qhsF1NwS4Bv3KYa4Wu
+
+  uavid:
+    title: UAVid
+    role: Secondary urban semantic-segmentation and temporal-context evidence
+    provider: DANS Dataverse official author deposit
+    landing_page: https://uavid.nl/
+    data_record: https://doi.org/10.17026/dans-x9f-w9sa
+    destination: UAVid
+    license: CC BY-NC-SA 4.0
+    estimated_download_gb: 6.0
+    confirmation_note: The automatic DOI route is the labeled UAVid v1 author deposit; document any use of the later 42-sequence release separately.
+    dataverse:
+      server: https://phys-techsciences.datastations.nl
+      persistent_id: doi:10.17026/dans-x9f-w9sa
+      version: "1.0"
+      archive: UAVid_DANS_v1.0.zip
+
+  uavreason:
+    title: UAVReason
+    role: Auxiliary aerial reasoning and out-of-distribution evidence
+    provider: Official UAVReason and upstream UAVScenes Hugging Face repositories
+    landing_page: https://github.com/JT-Sun/UAVReason
+    destination: UAVReason
+    license: UAVReason annotations Apache-2.0; upstream UAVScenes CC BY-NC-SA 4.0 academic use
+    estimated_download_gb: 38.0
+    confirmation_note: Only single-frame VQA/caption rows enter this notebook; temporal two-frame rows are indexed separately until a registered multi-image receiver is used.
+    huggingface:
+      annotations_repo: jarvissun/UAVReason_vqa
+      annotations_revision: e459740b936b0fb489ce5fede0c2077ee28999c8
+      annotations_allow_patterns: ["*.jsonl", "**/*.jsonl", README.md, .gitattributes]
+      images_repo: sijieaaa/UAVScenes
+      images_revision: 04a224fd14b0b8fdfd2633e68f20471b85c611a5
+      images_allow_patterns: [interval5_CAM_LIDAR.zip, README.md, .gitattributes]
+      images_archive: interval5_CAM_LIDAR.zip
+      repo_type: dataset
+
+  flame3:
+    title: FLAME 3
+    role: Wildfire and smoke case-study evidence
+    provider: Official Kaggle pilot subsets; full release at IEEE DataPort
+    landing_page: https://ieee-dataport.org/open-access/flame-3-radiometric-thermal-uav-imagery-wildfire-management
+    doi: 10.21227/w0mz-aq48
+    destination: FLAME3
+    license: Review and record IEEE DataPort/Kaggle terms before use or redistribution
+    estimated_download_gb: 20.0
+    confirmation_note: Kaggle subsets are development/pilot evidence only. Confirmatory wildfire claims require the event-diverse full six-burn release and still cannot treat neighboring frames as independent fires.
+    kaggle:
+      - name: sycan_cv_subset
+        handle: brycehopkins/flame-3-computer-vision-subset-sycan-marsh/versions/1
+      - name: nadir_thermal_subset
+        handle: brycehopkins/flame-3-nadir-thermal-plot-subset/versions/1

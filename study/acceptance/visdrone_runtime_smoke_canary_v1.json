@@ -1,0 +1,397 @@
+{
+  "schema_version": "semuav.visdrone-runtime-smoke-canary.v1",
+  "scope": "development_registered_train_canary",
+  "scientific_results_eligible": false,
+  "selection_rule": "lexicographic_first_frozen_det_train_general_mobility_source_v1",
+  "workflow_version": "semuav.visdrone-paper-workflow.v1",
+  "source_run_name": "semuav_visdrone_v1",
+  "sample_id": "visdrone:det_train:0000008_00889_d_0000039:profile:general_mobility",
+  "source_sample_id": "visdrone:det_train:0000008_00889_d_0000039",
+  "source_uid": "det_train/images/0000008_00889_d_0000039.jpg",
+  "component": "det_train",
+  "publisher_partition": "train",
+  "study_partition": "development_train",
+  "split": "train",
+  "mission": "visdrone_urban",
+  "image_relative_path": "VisDrone2019-DET-train/images/0000008_00889_d_0000039.jpg",
+  "image_sha256": "a8bec46fc2121d2db16ff124c2ce25165f5c94bc41d32ed6907e3608dfd6767a",
+  "capture_time_us": 1200000,
+  "telemetry": {
+    "gps_lat": 0,
+    "gps_lon": 0,
+    "altitude_m": 0,
+    "yaw_deg": 0,
+    "mission_profile": "general_mobility",
+    "registered_roi_xyxy": [
+      0.25,
+      0.25,
+      0.75,
+      0.85
+    ]
+  },
+  "registered_train_sampling_selection_sha256": "270d2e6b6db487dcd0fca1f568ddd6f12f4040ec7a751b9c081d5ea26ac535ca",
+  "detector_checkpoint_sha256": "a66356321ca834056f7945ecba2c121a6021999796beb0969e2e34232d79902a",
+  "detector_training_receipt_sha256": "e2f0349115b4749faaeb0b04a8b7eee3e1d01a94649743ef6d127966c8795fe7",
+  "detector_execution_revision": "d4ee110aa1c288044713aabfbd3986fc1efa2494",
+  "detector_proposal_policy": {
+    "top_k": 32,
+    "minimum_confidence": 0.05,
+    "ordering": "confidence_descending_label_geometry_track"
+  },
+  "detector_proposal_count": 32,
+  "source_detector_proposals_sha256": "5ece693644bf870124563475fe4186271f44fa4b5fc1397599af3060335093b7",
+  "detector_proposals": [
+    {
+      "bbox_normalized_xyxy": [
+        0.6582467471852022,
+        0.0012868843826593138,
+        0.7940951179055606,
+        0.06764441596137152
+      ],
+      "confidence": 0.791644811630249,
+      "label": "truck",
+      "track_id": 1
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.3286014108096852,
+        0.08200255250619128,
+        0.5503513111787683,
+        0.1461892321218852
+      ],
+      "confidence": 0.7547187209129333,
+      "label": "truck",
+      "track_id": 2
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.40409671559053306,
+        0.10017490760952819,
+        0.6008311552159926,
+        0.1825243981055964
+      ],
+      "confidence": 0.7393550276756287,
+      "label": "truck",
+      "track_id": 3
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.22611889558679918,
+        0.4322916666666667,
+        0.6204611385569853,
+        0.6806554457720588
+      ],
+      "confidence": 0.6526546478271484,
+      "label": "truck",
+      "track_id": 4
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.37677661671358,
+        0.1583708021375868,
+        0.6517792196834788,
+        0.2746151593775531
+      ],
+      "confidence": 0.6392195820808411,
+      "label": "truck",
+      "track_id": 5
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.3500516554888557,
+        0.03011304069967831,
+        0.5698152878705193,
+        0.10842096665326287
+      ],
+      "confidence": 0.6285281181335449,
+      "label": "truck",
+      "track_id": 6
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.2582988739013672,
+        0.3178836997038399,
+        0.6184143963982077,
+        0.4311343124489379
+      ],
+      "confidence": 0.6081550717353821,
+      "label": "truck",
+      "track_id": 7
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.3194634381462546,
+        0.23720770941840277,
+        0.641754285026999,
+        0.3736896190767974
+      ],
+      "confidence": 0.5431635975837708,
+      "label": "truck",
+      "track_id": 8
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.38691536398494947,
+        0.11414635352839052,
+        0.6545250836540671,
+        0.2745590309691585
+      ],
+      "confidence": 0.5312513709068298,
+      "label": "truck",
+      "track_id": 9
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.3453501084271599,
+        0.10352278566048816,
+        0.6039919684914982,
+        0.1914136300679126
+      ],
+      "confidence": 0.5275958180427551,
+      "label": "truck",
+      "track_id": 10
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.9405075970818014,
+        0.02979544845281863,
+        0.9998790067784926,
+        0.10805127511616626
+      ],
+      "confidence": 0.5185114145278931,
+      "label": "truck",
+      "track_id": 11
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.15740737915039063,
+        0.7612879136029411,
+        0.5569248423856847,
+        1.0
+      ],
+      "confidence": 0.4972735047340393,
+      "label": "truck",
+      "track_id": 12
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.2412471995634191,
+        0.7911241319444444,
+        0.6467755485983456,
+        1.0
+      ],
+      "confidence": 0.4910774230957031,
+      "label": "truck",
+      "track_id": 13
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.31931984845329736,
+        0.2297152650122549,
+        0.6472517125746783,
+        0.31690051508884803
+      ],
+      "confidence": 0.48836109042167664,
+      "label": "truck",
+      "track_id": 14
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.18389535791733685,
+        0.4335467569189134,
+        0.5753201652975644,
+        0.6296762503829657
+      ],
+      "confidence": 0.46794500946998596,
+      "label": "truck",
+      "track_id": 15
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.27612636790556067,
+        0.3662458831188726,
+        0.6262966380399816,
+        0.49188830805759803
+      ],
+      "confidence": 0.4569028913974762,
+      "label": "truck",
+      "track_id": 16
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.32768334781422337,
+        0.2385067210477941,
+        0.604116507137523,
+        0.343789533228656
+      ],
+      "confidence": 0.44926828145980835,
+      "label": "truck",
+      "track_id": 17
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.32801522647633274,
+        0.24501821480545344,
+        0.5372371897977941,
+        0.3280450958052492
+      ],
+      "confidence": 0.41820356249809265,
+      "label": "truck",
+      "track_id": 18
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.23599965712603402,
+        0.3595013786764706,
+        0.5286983265596278,
+        0.4784042458129085
+      ],
+      "confidence": 0.40609559416770935,
+      "label": "truck",
+      "track_id": 19
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.2855375626507927,
+        0.323841827990962,
+        0.5570422004250919,
+        0.4256050857843137
+      ],
+      "confidence": 0.40536755323410034,
+      "label": "truck",
+      "track_id": 20
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.45410883286420034,
+        0.10297382828456904,
+        0.601602352366728,
+        0.17927936229830474
+      ],
+      "confidence": 0.40288251638412476,
+      "label": "truck",
+      "track_id": 21
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.4132774801815257,
+        0.1563678018407884,
+        0.6610938577090992,
+        0.23624650543811274
+      ],
+      "confidence": 0.3684493899345398,
+      "label": "truck",
+      "track_id": 22
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.3606630213120404,
+        0.2647591385186887,
+        0.6408933751723346,
+        0.3741863973779616
+      ],
+      "confidence": 0.3597482442855835,
+      "label": "truck",
+      "track_id": 23
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.36485784194048715,
+        0.025107409907322305,
+        0.5651478486902574,
+        0.08594281564351001
+      ],
+      "confidence": 0.35476329922676086,
+      "label": "truck",
+      "track_id": 24
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.32756177116842833,
+        0.08110834258833742,
+        0.47161012537339153,
+        0.14364356745302287
+      ],
+      "confidence": 0.3313519060611725,
+      "label": "truck",
+      "track_id": 25
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.33700862211339616,
+        0.21992283241421567,
+        0.5981481664321002,
+        0.29773300270629083
+      ],
+      "confidence": 0.3190229535102844,
+      "label": "truck",
+      "track_id": 26
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.36076801524442786,
+        0.0,
+        0.5696084415211397,
+        0.07769981833065258
+      ],
+      "confidence": 0.3183861970901489,
+      "label": "truck",
+      "track_id": 27
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.9417507396024816,
+        0.02249828662747651,
+        0.9998827765969669,
+        0.08583176556755515
+      ],
+      "confidence": 0.29813143610954285,
+      "label": "truck",
+      "track_id": 28
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.47583815630744486,
+        0.2433520348243464,
+        0.6405298569623161,
+        0.31866502948835784
+      ],
+      "confidence": 0.2973244786262512,
+      "label": "truck",
+      "track_id": 29
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.18136354334214155,
+        0.38012647441789216,
+        0.6641307157628676,
+        0.49083275888480393
+      ],
+      "confidence": 0.29143282771110535,
+      "label": "truck",
+      "track_id": 30
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.48057659373563877,
+        0.20512918709150327,
+        0.6457054138183593,
+        0.2773587095971201
+      ],
+      "confidence": 0.2811308801174164,
+      "label": "truck",
+      "track_id": 31
+    },
+    {
+      "bbox_normalized_xyxy": [
+        0.9407745361328125,
+        0.01905672409955193,
+        0.9991336598115809,
+        0.0683271919200623
+      ],
+      "confidence": 0.2659823000431061,
+      "label": "truck",
+      "track_id": 32
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.cache/
+outputs/
+runs/
+data/
+*.pt
+*.pth
+*.safetensors
+*.token
+.env
+figdata/
+out/

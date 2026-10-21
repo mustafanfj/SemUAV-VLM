@@ -1,0 +1,26 @@
+schema_version: semuav.ontology.v1
+principles:
+  - visible_facts_only
+  - telemetry_is_authoritative
+  - insufficient_evidence_is_explicit
+actions: [NO_ACTION, REVIEW, RESPOND]
+mission_profiles:
+  routine:
+    default_deadline_ms: 2000
+  standard:
+    default_deadline_ms: 1200
+  high_priority:
+    default_deadline_ms: 700
+visdrone_urban:
+  objects: [pedestrian, people, bicycle, car, van, truck, tricycle, awning_tricycle, bus, motor]
+  relations: [image_plane_overlap]
+  events: [no_registered_priority_visible, visible_priority_outside_roi, visible_priority_roi_occupancy, priority_target_low_visibility, visible_image_plane_overlap, insufficient_evidence]
+urban:
+  objects: [pedestrian, people, bicycle, car, van, truck, tricycle, awning_tricycle, bus, motor]
+  relations: [near, overlapping, stopped_in_roadway, entering_roi, leaving_roi]
+  events: [none_visible, visible_road_obstruction, visible_close_proximity, insufficient_evidence]
+wildfire:
+  objects: [visible_smoke, visible_flame, vegetation, structure, vehicle, person]
+  relations: [smoke_near_structure, flame_near_vegetation, person_near_visible_fire]
+  events: [none_visible, visible_smoke, visible_flame, insufficient_evidence]
+unsupported_inferences: [intent, identity, assistance_need, fire_cause, accident_cause, legal_fault]

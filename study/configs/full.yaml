@@ -1,0 +1,203 @@
+schema_version: 1
+study_id: semuav_vlm_full_study
+profile: full
+seed: 20260823
+seeds: [20260823, 20260829, 20260907, 20260919, 20261001]
+allow_synthetic: false
+
+# All defaults are project-relative. On the NYUAD lab, set SEMUAV_DATA_ROOT,
+# SEMUAV_OUTPUT_ROOT, and the three input-file variables before loading this
+# configuration. Missing paths are a deliberate hard failure in real profiles.
+paths:
+  project_root: ..
+  data_root: "${SEMUAV_DATA_ROOT:-data}"
+  output_root: "${SEMUAV_OUTPUT_ROOT:-outputs/full}"
+  cache_root: "${SEMUAV_CACHE_ROOT:-.cache/full}"
+  annotations: "${SEMUAV_ANNOTATIONS:-annotations/development_adjudicated_labels.csv}"
+  test_annotations: "${SEMUAV_TEST_ANNOTATIONS:-annotations/untouched_test_adjudicated_labels.csv}"
+  split_manifest: "${SEMUAV_SPLIT_MANIFEST:-annotations/frozen_splits.csv.gz}"
+  channel_traces: "${SEMUAV_CHANNEL_TRACES:-channel_traces/trace_manifest.csv}"
+  telemetry_manifest: "${SEMUAV_TELEMETRY_MANIFEST:-telemetry/manifest.csv}"
+
+datasets:
+  visdrone:
+    adapter: visdrone
+    root: VisDrone
+    mission: urban
+    enabled: true
+    required: true
+    synthetic: false
+    options: {}
+  uavid:
+    adapter: uavid
+    root: UAVid
+    mission: urban
+    enabled: true
+    required: true
+    synthetic: false
+    options: {}
+  uavreason:
+    adapter: uavreason
+    root: UAVReason
+    mission: urban
+    enabled: true
+    required: true
+    synthetic: false
+    options:
+      manifest: manifest.jsonl
+  flame3:
+    adapter: flame3
+    root: FLAME3
+    mission: wildfire
+    enabled: true
+    required: true
+    synthetic: false
+    options:
+      manifest: manifest.csv
+      event_parent_depth: 1
+      critical_keywords: [fire, flame, smoke]
+
+split:
+  seed: 20260823
+  ratios:
+    train: 0.55
+    calibration: 0.15
+    validation: 0.15
+    test: 0.15
+  leakage_keys: [split_group, flight_id, sequence_id, location_id, event_id]
+  strata: [dataset, mission, critical_event]
+  require_frozen_manifest: true
+  min_test_units: 500
+  min_critical_test_events: 200
+
+annotations:
+  enabled: true
+  sample_column: sample_id
+  task_column: task
+  label_column: label
+  annotator_column: annotator_id
+  blinded_column: blinded
+  adjudicated_label_column: adjudicated_label
+  adjudicator_column: adjudicator_id
+  critical_column: is_critical
+  required_annotators: 2
+  require_blinding: true
+  require_manifest_coverage: true
+  require_adjudication_on_disagreement: true
+  min_observed_agreement: 0.80
+  min_chance_corrected_agreement: 0.80
+  min_rare_chance_corrected_agreement: 0.70
+  min_evidence_geometry_iou: 0.70
+
+runtime:
+  device: cuda:0
+  dtype: bfloat16
+  batch_size: 1
+  num_workers: 8
+  login_node_forbidden: true
+
+models:
+  input_size: [768, 768]
+  max_new_tokens: 384
+  detector:
+    backend: ultralytics
+    checkpoint: "${SEMUAV_DETECTOR_CHECKPOINT:-REQUIRED_DETECTOR_CHECKPOINT}"
+    tracker: botsort.yaml
+  vlms:
+    - id: qwen3_vl_2b
+      repo: Qwen/Qwen3-VL-2B-Instruct
+      revision: "${SEMUAV_QWEN_REVISION:-REQUIRED_40_HEX_COMMIT}"
+      quantization: int4
+    - id: smolvlm2_2b
+      repo: HuggingFaceTB/SmolVLM2-2.2B-Instruct
+      revision: "${SEMUAV_SMOLVLM_REVISION:-REQUIRED_40_HEX_COMMIT}"
+      quantization: int4
+    - id: moondream2
+      repo: vikhyatk/moondream2
+      revision: "${SEMUAV_MOONDREAM_REVISION:-REQUIRED_40_HEX_COMMIT}"
+      quantization: none
+  upper_bound:
+    id: upper_bound
+    repo: "${SEMUAV_UPPER_BOUND_REPO:-REQUIRED_UPPER_BOUND_REPO}"
+    revision: "${SEMUAV_UPPER_BOUND_REVISION:-REQUIRED_40_HEX_COMMIT}"
+    quantization: none
+  feature_baseline:
+    encoder: "${SEMUAV_FEATURE_ENCODER:-REQUIRED_REGISTERED_ENCODER}"
+    split_layer: "${SEMUAV_FEATURE_SPLIT_LAYER:-REQUIRED_SPLIT_LAYER}"
+    receiver_head: "${SEMUAV_FEATURE_RECEIVER_HEAD:-REQUIRED_RECEIVER_HEAD}"
+    quantization: [int8, int4]
+
+payloads:
+  wire_format: cbor
+  mtu_bytes: 1200
+  image_codecs: [jpeg, webp, avif]
+  image_qualities: [20, 35, 50, 70, 90]
+  image_scales: [0.25, 0.5, 0.75, 1.0]
+  levels: [L0, L1, L2, L3, L4, L5]
+
+network:
+  trace_semantics: raw_service
+  selective_repeat_window_fragments: 512
+  max_retries: 2
+  static_rate_mbps: [0.1, 0.25, 0.5, 1, 2, 5, 10, 20]
+  rtt_ms: [20, 80, 200]
+  loss: [0.0, 0.01, 0.05, 0.15]
+  # Frozen Experiment 3 dimension. The Gilbert-Elliott special case has
+  # loss-free good slots, fully lossy bad slots, and this recovery probability.
+  static_loss_models: [iid, gilbert_elliott]
+  static_burst_recovery_probability: 0.2
+  static_burst_slot_ms: 100
+  static_jitter_ms: [0, 10]
+  queue_kb: [32, 128, 512]
+  # Registered, outcome-blind Experiment 3 workload cap. Whole visual groups
+  # are hash-selected per dataset; observations are temporally uniform within
+  # each selected group. Experiment 4 still uses the full eligible test design.
+  static_max_groups_per_dataset: 3
+  static_max_observations_per_group: 8
+  static_max_variants_per_mode_source: 3
+  held_out_trace_realizations: 30
+  held_out_trace_families: [sudden_drop, recovery, ramp, markov, fading, outage]
+
+controller:
+  minimum_dwell_us: 2000000
+  hysteresis_margin: 0.04
+  vlm_trigger_risk: 0.45
+  vlm_trigger_uncertainty: 0.35
+  risk_escalation: 0.70
+  uncertainty_escalation: 0.35
+  byte_weight: 0.02
+  energy_weight: 0.08
+  evidence_weight: 0.30
+  deadline_weight: 1.0
+  policies: [fixed_modes, adaptive_image, adaptive_semantic, detector_only, channel_only, mission_only, deadline_greedy, channel_mission, proposed_full, heuristic_lookahead_reference]
+
+evaluation:
+  primary_endpoint: correct_timely_action
+  primary_wire_budget_bytes_per_s: "${SEMUAV_WIRE_BUDGET:-REQUIRED_POSITIVE_BUDGET}"
+  primary_energy_budget_j_per_s: "${SEMUAV_ENERGY_BUDGET:-REQUIRED_POSITIVE_BUDGET}"
+  false_alert_limit: 0.05
+  bootstrap_repetitions: 10000
+  primary_margin: 0.03
+  natural_test_units: 500
+  safety_critical_positive_units: 200
+  safety_noncritical_units: 500
+  ood_units: 150
+  minimum_power: 0.80
+  # Freeze these before validation; changing them creates a new config/run ID.
+  max_vlm_p95_latency_ms: 1000
+  max_vlm_peak_memory_mb: 12000
+  min_schema_valid_rate: 0.98
+  min_semantic_valid_rate: 0.98
+  min_critical_recall: 0.85
+  minimum_vlm_context_gain: 0.03
+  minimum_calibration_incorrect_units: 50
+  target_memory_limit_mb: 8000
+
+hardware:
+  target: jetson_class
+  hardware_id: "${SEMUAV_TARGET_HARDWARE_ID:-REQUIRED_TARGET_HARDWARE_ID}"
+  target_log: "${SEMUAV_TARGET_LOG:-REQUIRED_JETSON_LOG.jsonl}"
+  thermal_limit_c: 82
+  radio_tx_j_per_byte: "${SEMUAV_RADIO_TX_J_PER_BYTE:-REQUIRED_POSITIVE_MEASUREMENT}"
+  radio_rx_j_per_byte: "${SEMUAV_RADIO_RX_J_PER_BYTE:-REQUIRED_POSITIVE_MEASUREMENT}"
+  netem_manual_sudo: true

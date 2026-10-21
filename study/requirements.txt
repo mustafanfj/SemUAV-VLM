@@ -1,0 +1,51 @@
+# Install a CUDA-compatible torch/torchvision build for the lab driver first if needed.
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+Pillow>=10.2
+PyYAML>=6.0
+cbor2>=5.6
+protobuf>=5.0
+zstandard>=0.22
+pyarrow>=15.0
+pydantic>=2.6
+psutil>=5.9
+nvidia-ml-py>=12.0
+tqdm>=4.66
+filelock>=3.13
+jupyterlab>=4.2
+ipykernel>=6.29
+nbclient>=0.10
+torch==2.7.0
+torchvision==0.22.0
+# Qwen3-VL entered the upstream 4.57 line.  Keep the runtime below the
+# Transformers 5 custom-model API break that prevents the locked Moondream
+# snapshot from loading.
+transformers==4.57.1
+huggingface-hub>=0.34,<1.0
+tokenizers>=0.22,<=0.23
+accelerate==1.14.0
+safetensors>=0.4
+sentencepiece>=0.2
+requests>=2.31
+# Required by the frozen SmolVLM processor.  Pin its tiny transitive parser so
+# the clean inference environment cannot drift between runs.
+num2words==0.5.14
+docopt==0.6.2
+gdown==6.1.0
+# KaggleHub 1.0.2 supports the lab's verified Python 3.10 and versioned handles.
+kagglehub==1.0.2
+bitsandbytes>=0.45; platform_system == "Linux"
+ultralytics==8.4.135
+# Preinstall the registered tracker dependency so Ultralytics never invokes
+# its runtime AutoUpdate path inside a scientific environment.
+lap==0.5.13
+opencv-python-headless>=4.10
+pillow-avif-plugin>=1.5
+imageio>=2.35
+# Provides a reproducible FFmpeg fallback when the host has no system binary.
+imageio-ffmpeg==0.6.0
+pytest>=8.0

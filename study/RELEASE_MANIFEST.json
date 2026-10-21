@@ -1,0 +1,1017 @@
+{
+  "archive_member_count": 159,
+  "archive_name": "SemUAV-VLM-VisDrone-Paper-Study-20261013-v3r2.zip",
+  "audit_record": "V3_AUDIT_AND_CHANGES.md",
+  "compatibility": {
+    "calibration_gate_rule_amended_before_test": true,
+    "controller_revised_before_test": true,
+    "fresh_scientific_environment_seal_required": true,
+    "fresh_three_model_runtime_smoke_required": true,
+    "historical_receipts_modified": false,
+    "native_receiver_caches": "validation reused exactly from v3r1 (hash-verified, re-validated); test built fresh",
+    "raw_inference_producer_and_measurement_sources_changed": false,
+    "registered_experimental_design_changed": false,
+    "requirements_changed": false,
+    "video_wire_format_amended_for_odd_geometry": true
+  },
+  "dataset_material_included": false,
+  "empirical_results_included": false,
+  "payload_file_count": 157,
+  "payload_inventory": [
+    {
+      "bytes": 240,
+      "path": ".gitignore",
+      "role": "source_payload",
+      "sha256": "8f4c4bfe21f4913b0589306961bf6f0cd0bd06e6005631c38879894882da3714"
+    },
+    {
+      "bytes": 19997,
+      "path": "METHODOLOGY_AMENDMENT_20260908.md",
+      "role": "source_payload",
+      "sha256": "cbb56f0406cd709d4639fe18365f3c0d69273c6c0273e6425e5b297ad97f7e02"
+    },
+    {
+      "bytes": 7611,
+      "path": "PRE_EXPERIMENT_TEMPORAL_FEASIBILITY_AMENDMENT_20260914_V2R7.md",
+      "role": "source_payload",
+      "sha256": "d24652933f472a26d55e7c7272a3cd40e90af1d2a3d47c35dcf08b782ee51bd8"
+    },
+    {
+      "bytes": 5392,
+      "path": "PRE_SMOKE_CORRECTION_20260908.md",
+      "role": "source_payload",
+      "sha256": "f30f970155fd4256f5cb6e8c3c7e89d7f2012397f38aa6301faa3d512e50d2bd"
+    },
+    {
+      "bytes": 3662,
+      "path": "PRE_SMOKE_NOTEBOOK_ACCEPTANCE_CORRECTION_20260912.md",
+      "role": "source_payload",
+      "sha256": "07346eea53406572ccdd5c370c85b39a3b477843a933bb2e566af72429d99c02"
+    },
+    {
+      "bytes": 2159,
+      "path": "PRE_SMOKE_PREDECESSOR_BOUNDARY_ROUTING_CORRECTION_20260921_V2R12.md",
+      "role": "source_payload",
+      "sha256": "3c64891976ae097c5adc320ab7fc5653868320c3c4180c83ae4bf9370d80c2a8"
+    },
+    {
+      "bytes": 7117,
+      "path": "PRE_TEST_CALIBRATION_GATE_AMENDMENT_20261013_V3R2.md",
+      "role": "source_payload",
+      "sha256": "ad2b482d14db95d7770879a29c97fe351a6852a94b8036cb935a023c6670a192"
+    },
+    {
+      "bytes": 2749,
+      "path": "PRE_VALIDATION_ACCEPTANCE_RECOVERY_ISOLATION_20260921_V2R11.md",
+      "role": "source_payload",
+      "sha256": "ff0f0329cbb06e2f754c243578bc80c538a208a2f7df72caf0264e6d6fc505ef"
+    },
+    {
+      "bytes": 3703,
+      "path": "PRE_VALIDATION_LOW_EVIDENCE_PACKET_CORRECTION_20260921_V2R13.md",
+      "role": "source_payload",
+      "sha256": "ab9cf031a55a12caa6d6f91f0fc98b4d756389263c9a769cd9b9338138e6f63c"
+    },
+    {
+      "bytes": 9059,
+      "path": "PRE_VALIDATION_MODEL_SET_AMENDMENT_20260914_V2R6.md",
+      "role": "source_payload",
+      "sha256": "6146e21908d00757dc15830c8232aff54c32953a3594bddc7dfcc739a876a1c2"
+    },
+    {
+      "bytes": 5450,
+      "path": "PRE_VALIDATION_NATIVE_RECEIVER_RECOVERY_20260921_V2R10.md",
+      "role": "source_payload",
+      "sha256": "84510ede90584161c6254e530b68977b070097837197d31e64b50a6925380bec"
+    },
+    {
+      "bytes": 14988,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260909.md",
+      "role": "source_payload",
+      "sha256": "ce22fd45c1f2534bf35c3218d24e29ff32a182a167ebaccd58cf3ce3452b6d31"
+    },
+    {
+      "bytes": 5896,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260912_V2R3.md",
+      "role": "source_payload",
+      "sha256": "3d3e4c730029050688f75a53abd4c374ed6ff409fc090e598e2966ebbf1cf58e"
+    },
+    {
+      "bytes": 5594,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260912_V2R4.md",
+      "role": "source_payload",
+      "sha256": "f61b0c6e273f083caec72ff2745a9a8388cb03081f9b27bf5193d1f90f388765"
+    },
+    {
+      "bytes": 8665,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260913_V2R5.md",
+      "role": "source_payload",
+      "sha256": "10fc6ad3a2d4ae41855ae5fce25c66cb20f4e6393d81f0f099d7a3071e317aae"
+    },
+    {
+      "bytes": 6879,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260914_V2R8.md",
+      "role": "source_payload",
+      "sha256": "cfa6ae49e44915d4417530f0888f5a36c77b3f85bf752650714d5e323dcb9c36"
+    },
+    {
+      "bytes": 9215,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260920_V2R9.md",
+      "role": "source_payload",
+      "sha256": "b67bab5d9e7b98c425f3feb3d4a0aa0de7578584979825b7560b002b631262d5"
+    },
+    {
+      "bytes": 4509,
+      "path": "README.md",
+      "role": "source_payload",
+      "sha256": "ca2e5da3d443757d920bbb47cc851e378733f8a19cc9a982015d55920d36e06e"
+    },
+    {
+      "bytes": 3118,
+      "path": "REPAIR_NOTES.md",
+      "role": "source_payload",
+      "sha256": "6b8e7ef8e01d26f5006f508a314b3a0e3e2459420047aa72a5676ea2a34d1217"
+    },
+    {
+      "bytes": 142607,
+      "path": "SemUAV_VLM_Full_Study.ipynb",
+      "role": "source_payload",
+      "sha256": "0c4364be3fc2f567655dc94b8c7744a48264ced564e28b27810358ecef83fae2"
+    },
+    {
+      "bytes": 268957,
+      "path": "SemUAV_VLM_VisDrone_Paper_Study.ipynb",
+      "role": "source_payload",
+      "sha256": "fe7e465ccf11f95da1be14e10f6df31544dba9e13a403e4943d2c24a7bf14cf5"
+    },
+    {
+      "bytes": 3695,
+      "path": "V3R2_CHANGES.md",
+      "role": "source_payload",
+      "sha256": "3943c5d3720e63a703a6ad20845ebabec33fa2cc14ed54573f010ba023714043"
+    },
+    {
+      "bytes": 6622,
+      "path": "V3_AUDIT_AND_CHANGES.md",
+      "role": "source_payload",
+      "sha256": "c975e12916a66b19ce6b904f24c43c2be680b00ed5822b6ef3e56f7b11034c12"
+    },
+    {
+      "bytes": 6876,
+      "path": "VALIDATION_REPORT.md",
+      "role": "source_payload",
+      "sha256": "75681a3ebfcfa411ce0f544461752f82743ed385c042d50a9209f92752f34951"
+    },
+    {
+      "bytes": 7938,
+      "path": "VISDRONE_PAPER_RUN_GUIDE.md",
+      "role": "source_payload",
+      "sha256": "ae0f90500ccaae8336a1fe8811ae30fed623a35a31b7fce6a8f2add297534657"
+    },
+    {
+      "bytes": 9858,
+      "path": "acceptance/visdrone_runtime_smoke_canary_v1.json",
+      "role": "source_payload",
+      "sha256": "ba22e0083657e7a5ad454e71586a0d31485a5216afbd2f8b73ce3aa599d1b88d"
+    },
+    {
+      "bytes": 6002,
+      "path": "annotations/ANNOTATION_GUIDE.md",
+      "role": "source_payload",
+      "sha256": "6d2d0fc03dc66f1297bf2103ebbfb2910436f17de78e1e39976dd635d3185ae6"
+    },
+    {
+      "bytes": 1300,
+      "path": "annotations/mission_ontology.yaml",
+      "role": "source_payload",
+      "sha256": "afee8f0f70021761345e19c9f1d02ee931dabb5c134346d083457d1492c0c07f"
+    },
+    {
+      "bytes": 143762,
+      "path": "build_full_notebook.py",
+      "role": "source_payload",
+      "sha256": "45236185431bc0794ee734578c0d393f19acf9cf63e9327e7cdb2eaa0f212aee"
+    },
+    {
+      "bytes": 6808,
+      "path": "build_v3_release.py",
+      "role": "source_payload",
+      "sha256": "526b868a9bad50c2a7aca342036572cea52e4142fb29be2742549b3dd56927e6"
+    },
+    {
+      "bytes": 272782,
+      "path": "build_visdrone_paper_notebook.py",
+      "role": "source_payload",
+      "sha256": "9835ccb1cb5ab9f3293d413f06e71f1a875b4255e4c008436e8ad628cb59a047"
+    },
+    {
+      "bytes": 4119,
+      "path": "configs/datasets.yaml",
+      "role": "source_payload",
+      "sha256": "94a8f02e0dc16d22e29f7533722a933d19b7d7e433e78b1f2fb5bfad904dcd42"
+    },
+    {
+      "bytes": 1196,
+      "path": "configs/dry_run.yaml",
+      "role": "source_payload",
+      "sha256": "98a348ab9b0b7a058cbd04fa12fc4ce63e15db777afa873fa9a5dc3ce9f91806"
+    },
+    {
+      "bytes": 6624,
+      "path": "configs/full.yaml",
+      "role": "source_payload",
+      "sha256": "37f82426cd151340a8471b3524d250646e8b613c9f82bd60707fd8e8a86c0cdc"
+    },
+    {
+      "bytes": 21636,
+      "path": "configs/visdrone_paper.yaml",
+      "role": "source_payload",
+      "sha256": "8aefa4dfa0848627beea950176f9b9d7f4005781f6e4dc296e110f9ea083b221"
+    },
+    {
+      "bytes": 7611,
+      "path": "legacy/v2r13/PRE_EXPERIMENT_TEMPORAL_FEASIBILITY_AMENDMENT_20260914_V2R7.md",
+      "role": "historical_reference",
+      "sha256": "d24652933f472a26d55e7c7272a3cd40e90af1d2a3d47c35dcf08b782ee51bd8"
+    },
+    {
+      "bytes": 2159,
+      "path": "legacy/v2r13/PRE_SMOKE_PREDECESSOR_BOUNDARY_ROUTING_CORRECTION_20260921_V2R12.md",
+      "role": "historical_reference",
+      "sha256": "3c64891976ae097c5adc320ab7fc5653868320c3c4180c83ae4bf9370d80c2a8"
+    },
+    {
+      "bytes": 2749,
+      "path": "legacy/v2r13/PRE_VALIDATION_ACCEPTANCE_RECOVERY_ISOLATION_20260921_V2R11.md",
+      "role": "historical_reference",
+      "sha256": "ff0f0329cbb06e2f754c243578bc80c538a208a2f7df72caf0264e6d6fc505ef"
+    },
+    {
+      "bytes": 3703,
+      "path": "legacy/v2r13/PRE_VALIDATION_LOW_EVIDENCE_PACKET_CORRECTION_20260921_V2R13.md",
+      "role": "historical_reference",
+      "sha256": "ab9cf031a55a12caa6d6f91f0fc98b4d756389263c9a769cd9b9338138e6f63c"
+    },
+    {
+      "bytes": 5450,
+      "path": "legacy/v2r13/PRE_VALIDATION_NATIVE_RECEIVER_RECOVERY_20260921_V2R10.md",
+      "role": "historical_reference",
+      "sha256": "84510ede90584161c6254e530b68977b070097837197d31e64b50a6925380bec"
+    },
+    {
+      "bytes": 5594,
+      "path": "legacy/v2r13/PRE_VALIDATION_RUNTIME_CORRECTION_20260912_V2R4.md",
+      "role": "historical_reference",
+      "sha256": "f61b0c6e273f083caec72ff2745a9a8388cb03081f9b27bf5193d1f90f388765"
+    },
+    {
+      "bytes": 20789,
+      "path": "legacy/v2r13/README.md",
+      "role": "historical_reference",
+      "sha256": "c3a68e451c05dc64bf1f4f083187336469b4abc2bde4a8ec37ab7237b7219cfb"
+    },
+    {
+      "bytes": 71137,
+      "path": "legacy/v2r13/RELEASE_MANIFEST.json",
+      "role": "historical_reference",
+      "sha256": "53dcc739804542fda76a65ce32d88d654e49e1d09f518c35de93ef18b407d8b3"
+    },
+    {
+      "bytes": 11478,
+      "path": "legacy/v2r13/RELEASE_MANIFEST_SHA256.txt",
+      "role": "historical_reference",
+      "sha256": "9678c1607ca8eafaf6eadcc4c95f84b751bef592c5ca7c5c602aab99fbedf91e"
+    },
+    {
+      "bytes": 142607,
+      "path": "legacy/v2r13/SemUAV_VLM_Full_Study.ipynb",
+      "role": "historical_reference",
+      "sha256": "0c4364be3fc2f567655dc94b8c7744a48264ced564e28b27810358ecef83fae2"
+    },
+    {
+      "bytes": 421537,
+      "path": "legacy/v2r13/SemUAV_VLM_VisDrone_Paper_Study.ipynb",
+      "role": "historical_reference",
+      "sha256": "8794bafeb425213ec4b454d9de714b9c239316c606ac83bdc1bfdc2d4126fa1b"
+    },
+    {
+      "bytes": 10492,
+      "path": "legacy/v2r13/VALIDATION_REPORT.md",
+      "role": "historical_reference",
+      "sha256": "8726e20a2138f489172f6057b947faf36d75a7edfc5d20bd18c5f748fafd2db1"
+    },
+    {
+      "bytes": 20556,
+      "path": "legacy/v2r13/VISDRONE_PAPER_RUN_GUIDE.md",
+      "role": "historical_reference",
+      "sha256": "10070a0d172cdd72ac94a1463de7da8ef803192706cf3c7b5cc1d894cd4f14ab"
+    },
+    {
+      "bytes": 143762,
+      "path": "legacy/v2r13/build_full_notebook.py",
+      "role": "historical_reference",
+      "sha256": "45236185431bc0794ee734578c0d393f19acf9cf63e9327e7cdb2eaa0f212aee"
+    },
+    {
+      "bytes": 456339,
+      "path": "legacy/v2r13/build_visdrone_paper_notebook.py",
+      "role": "historical_reference",
+      "sha256": "f52b866b424d5997b5a03b38386c5c258127489456de215d6b795f671dd4d07d"
+    },
+    {
+      "bytes": 21540,
+      "path": "legacy/v2r13/configs/visdrone_paper.yaml",
+      "role": "historical_reference",
+      "sha256": "f238a74001e79da03e23c58fb3927afc79c5cee29407dca4189b691607412c9c"
+    },
+    {
+      "bytes": 1397,
+      "path": "legacy/v2r13/requirements.txt",
+      "role": "historical_reference",
+      "sha256": "028a2757d2e1565db90ff26a26fd6e564bd592c868ed093d632cb930d438dfa5"
+    },
+    {
+      "bytes": 43767,
+      "path": "legacy/v2r13/semuav/visdrone_receiver_runtime.py",
+      "role": "historical_reference",
+      "sha256": "a1d788d1e71c59ca8bf65aeb56a9018f91447eaca15317429dbb8109721843ca"
+    },
+    {
+      "bytes": 4005,
+      "path": "paper_figures/common.py",
+      "role": "source_payload",
+      "sha256": "80fb340863b263974e77f88af39483aafde63ff768b87bd2f49116ff7a9b5a6f"
+    },
+    {
+      "bytes": 10179,
+      "path": "paper_figures/extract_figdata.py",
+      "role": "source_payload",
+      "sha256": "7715f1f189e20a096c07d8496b4fbcce96caa1142d0584569d20180ca88bb0f5"
+    },
+    {
+      "bytes": 8808,
+      "path": "paper_figures/fig_exp1_2.py",
+      "role": "source_payload",
+      "sha256": "bde2f537cf45f297a8392c46153241fd78acb34ae545a983ea42bf855b3a50e4"
+    },
+    {
+      "bytes": 13933,
+      "path": "paper_figures/fig_exp3_6.py",
+      "role": "source_payload",
+      "sha256": "898e5680c26f4edb5c3bc2a64ab92840cd8589cba0f6efd5ff7bed2ddc88b13b"
+    },
+    {
+      "bytes": 4408,
+      "path": "paper_figures/fig_run_example.py",
+      "role": "source_payload",
+      "sha256": "9d148504cace60431f9f2c801ca4e23108afe4eec1a15bb4806cfe493d32536a"
+    },
+    {
+      "bytes": 3618,
+      "path": "paper_figures/stats.py",
+      "role": "source_payload",
+      "sha256": "ca88d3e3713afe759b823cd26c40d7f725847169037e2302bf9976bd3a93a217"
+    },
+    {
+      "bytes": 2868,
+      "path": "paper_figures/tables.py",
+      "role": "source_payload",
+      "sha256": "b89ed6ab8b464c82d72a76e31bf2cca168fb585836ac6b496f3b1cd5b61d526f"
+    },
+    {
+      "bytes": 1918,
+      "path": "prompts/mission_packet_v1.txt",
+      "role": "source_payload",
+      "sha256": "ad617b2b6f55ee264ea68c249ec1f426d22e1f775bf4591886800a0351c3752b"
+    },
+    {
+      "bytes": 1547,
+      "path": "prompts/visdrone_proposal_decision_v1.txt",
+      "role": "source_payload",
+      "sha256": "f6aa2991aaf253502c75b1b30a9412dfc8b65089347a4b2ac58f79b107b31010"
+    },
+    {
+      "bytes": 1825,
+      "path": "prompts/visdrone_proposal_decision_v2.txt",
+      "role": "source_payload",
+      "sha256": "2f38e4c11170100e09cdea42022e7bd8d9d3e72d7854c2fb9c4d233a7f85ca40"
+    },
+    {
+      "bytes": 797,
+      "path": "prompts/visdrone_proposal_decision_v3.txt",
+      "role": "source_payload",
+      "sha256": "d17c93072f1dc33d0ba507d074486f51937749976a39300feeaa4286352d670f"
+    },
+    {
+      "bytes": 2897,
+      "path": "prompts/visdrone_source_rule_v1.txt",
+      "role": "source_payload",
+      "sha256": "296d08befb5bd34e2c326d569fba63450f54d41f988914659431ebec2cbe1898"
+    },
+    {
+      "bytes": 1397,
+      "path": "requirements.txt",
+      "role": "source_payload",
+      "sha256": "028a2757d2e1565db90ff26a26fd6e564bd592c868ed093d632cb930d438dfa5"
+    },
+    {
+      "bytes": 319,
+      "path": "semuav/__init__.py",
+      "role": "source_payload",
+      "sha256": "54f383f57984d83a582d6b844e843ff4e7da43550b3bf45bb95ff30b7bba8695"
+    },
+    {
+      "bytes": 59094,
+      "path": "semuav/acquisition.py",
+      "role": "source_payload",
+      "sha256": "1968ca71ccc8737ccd9718abe2acc86880a05dbf3175615a2ae7af0d1c2f62a9"
+    },
+    {
+      "bytes": 46791,
+      "path": "semuav/config.py",
+      "role": "source_payload",
+      "sha256": "096f62fb148d6ac629c5378bf3cc0e6205534d98f7e1f3796849367ba1d3ea6f"
+    },
+    {
+      "bytes": 25460,
+      "path": "semuav/control.py",
+      "role": "source_payload",
+      "sha256": "566a7f7a4ab1554daef7e9d3d14a7982e04c18d541cfa8666610bed7b0512fcb"
+    },
+    {
+      "bytes": 86147,
+      "path": "semuav/data.py",
+      "role": "source_payload",
+      "sha256": "440c60896c39b63e9c413befcd212f7ade20dfce285deac796548670cc840554"
+    },
+    {
+      "bytes": 20090,
+      "path": "semuav/evaluation.py",
+      "role": "source_payload",
+      "sha256": "1b898fb52cec45970c8f258fd64883cc850e23bbe4a0861a7355f328c816f1fc"
+    },
+    {
+      "bytes": 17149,
+      "path": "semuav/exp6_strategies.py",
+      "role": "source_payload",
+      "sha256": "0dde99db51f016129c677d817499cf6f0d17b8a128a8d2e00bd99926c8330d6a"
+    },
+    {
+      "bytes": 306981,
+      "path": "semuav/experiments.py",
+      "role": "source_payload",
+      "sha256": "ca6f53db63551f67f7c463a04f92cff54c673f10533f3b941eb91c57e1016153"
+    },
+    {
+      "bytes": 80571,
+      "path": "semuav/figures.py",
+      "role": "source_payload",
+      "sha256": "45943822ebc4dc16db2fc5cef6efb586e46c7735403a09803f09f60951398cde"
+    },
+    {
+      "bytes": 66503,
+      "path": "semuav/hardware.py",
+      "role": "source_payload",
+      "sha256": "377ba6302df8fe8b29d63ef80a24ff14882d764c63ddeae955eee4c02ca74954"
+    },
+    {
+      "bytes": 61708,
+      "path": "semuav/network.py",
+      "role": "source_payload",
+      "sha256": "de4dd8bd4363cc06ba6c094ccb657827821082d67ba34b2afaaea9e97280f349"
+    },
+    {
+      "bytes": 125885,
+      "path": "semuav/perception.py",
+      "role": "source_payload",
+      "sha256": "420f3dbcd8a9a9b61feabd1b2f367ea728aba34710b8257f725e432d0ad5ef67"
+    },
+    {
+      "bytes": 73034,
+      "path": "semuav/policy_reducer.py",
+      "role": "source_payload",
+      "sha256": "521a7259608af57ab9512c8c7eb5bfa1a3d227b697c0cc1d48ab30da36e13ea0"
+    },
+    {
+      "bytes": 51834,
+      "path": "semuav/protocol.py",
+      "role": "source_payload",
+      "sha256": "b8a20cff97c80577aa3b2e3a32b6771b1c90ada41fad2e51d21b22ceb058c0fa"
+    },
+    {
+      "bytes": 45306,
+      "path": "semuav/registry.py",
+      "role": "source_payload",
+      "sha256": "5d247e1072e8365920a638eab9c45564e78472f48e99594e384dc5dc465a97ba"
+    },
+    {
+      "bytes": 2961,
+      "path": "semuav/runtime.py",
+      "role": "source_payload",
+      "sha256": "795a89e412076a72900e9f68c74dfa82f2679ef62476648f40c27b5d95d2c13d"
+    },
+    {
+      "bytes": 1345,
+      "path": "semuav/runtime_smoke_worker.py",
+      "role": "source_payload",
+      "sha256": "f6933baa9e868983f0293c8665dc1c5c2ed6967f71041ee3f56880e753dca935"
+    },
+    {
+      "bytes": 17772,
+      "path": "semuav/v3r1_import.py",
+      "role": "source_payload",
+      "sha256": "b93ae526d3c535bc9bcb6d323bb46a90a7c254f2d627c77438ed0250dab9240d"
+    },
+    {
+      "bytes": 18523,
+      "path": "semuav/visdrone_measurement.py",
+      "role": "source_payload",
+      "sha256": "5f354fee6d2086f024ee5d6b55f24909ebebb5feb8c735a5d83a5e663bb578ce"
+    },
+    {
+      "bytes": 184643,
+      "path": "semuav/visdrone_models.py",
+      "role": "source_payload",
+      "sha256": "d8a31bb1a4ec066a562d0c617cd6e36dc05cc47b58ebd031014345b794d96625"
+    },
+    {
+      "bytes": 39247,
+      "path": "semuav/visdrone_paper.py",
+      "role": "source_payload",
+      "sha256": "2768d4365076617cab66e468fa38526396669c0a4d92f3cc9bb149b77ec06d20"
+    },
+    {
+      "bytes": 44283,
+      "path": "semuav/visdrone_receiver_runtime.py",
+      "role": "source_payload",
+      "sha256": "1f8205c1d2bcdbc956a79b290bb3efe8c508f847150e97d5755adcd548ab2678"
+    },
+    {
+      "bytes": 59642,
+      "path": "semuav/visdrone_receivers.py",
+      "role": "source_payload",
+      "sha256": "f4c4d2df9d2eb34b76a4ce31ed5a1e94c343e67437fec3af6e49f3d5f1000d15"
+    },
+    {
+      "bytes": 13639,
+      "path": "semuav/visdrone_recovery.py",
+      "role": "source_payload",
+      "sha256": "cfd3fe450e82157d2aac9d58c12aa56627d778957ad265a1cc9d2b86c01e50a6"
+    },
+    {
+      "bytes": 300292,
+      "path": "semuav/visdrone_runner.py",
+      "role": "source_payload",
+      "sha256": "1cb4178f76b91622c3d88dddd954849a9a5cd72007b79cf248d0805c544f1d44"
+    },
+    {
+      "bytes": 182913,
+      "path": "semuav/visdrone_workflow.py",
+      "role": "source_payload",
+      "sha256": "8a6f4b995a991a961cad05ad26e33b4ef041c1f5de22cf48a1ebdc3c33065b1a"
+    },
+    {
+      "bytes": 28246,
+      "path": "tests/test_acquisition.py",
+      "role": "source_payload",
+      "sha256": "9608372aed9b56e225afe8faf6c06a5543467b55fc24379daee3588a2567b686"
+    },
+    {
+      "bytes": 3706,
+      "path": "tests/test_annotation_geometry.py",
+      "role": "source_payload",
+      "sha256": "ae1af78210228b3c9d483111a69f1973b0b9d228174c80e921d5a8c2d92b7fec"
+    },
+    {
+      "bytes": 4546,
+      "path": "tests/test_annotation_ontology.py",
+      "role": "source_payload",
+      "sha256": "8f37dcfcb9eb0ddecc8690a732563d7c98b930703369ca275dc7f14f4452b7e0"
+    },
+    {
+      "bytes": 14666,
+      "path": "tests/test_controller_ablations.py",
+      "role": "source_payload",
+      "sha256": "26db9fcba61bdd5899f715cfd8be380b0d7b9e99a87ee39cc1b53f5ca920ec34"
+    },
+    {
+      "bytes": 44719,
+      "path": "tests/test_core.py",
+      "role": "source_payload",
+      "sha256": "98f38bacc4142e8191fa536ba59674915eba91fd6e11d1b4976ea00db7372245"
+    },
+    {
+      "bytes": 26596,
+      "path": "tests/test_data_workflow.py",
+      "role": "source_payload",
+      "sha256": "17424aabd70ea2f01770f782ff8f56f3eabc0090cb765e5cf60c5ebe5ec2aed5"
+    },
+    {
+      "bytes": 5061,
+      "path": "tests/test_detector_frozen_policy.py",
+      "role": "source_payload",
+      "sha256": "6c7fe510662018c9ed6e88f2fde8192ed59a3f1758e3a71fd4ddfd76d9a1ba27"
+    },
+    {
+      "bytes": 4417,
+      "path": "tests/test_dynamic_sharding.py",
+      "role": "source_payload",
+      "sha256": "8a6ce0b4954eddec9fd99f48aeb15c9fbe67a9db81dc519728f559d252b876c9"
+    },
+    {
+      "bytes": 8018,
+      "path": "tests/test_evaluation_vectorized.py",
+      "role": "source_payload",
+      "sha256": "01b35046daa5dc40fe329e6653b523e42870378deeede63060170c193ad45868"
+    },
+    {
+      "bytes": 18286,
+      "path": "tests/test_experiment1_metrics.py",
+      "role": "source_payload",
+      "sha256": "bf6287ecf049132d38e3f54c7bd49bb9dc1741ede5aa5ca0b2cd34cd40a81a8c"
+    },
+    {
+      "bytes": 17271,
+      "path": "tests/test_experiment3_partitioned.py",
+      "role": "source_payload",
+      "sha256": "cc239bf803b1a07d74cd889bb34497eff8f2f5ac4afa07d3b582386322317667"
+    },
+    {
+      "bytes": 2525,
+      "path": "tests/test_experiment3_variant_selection.py",
+      "role": "source_payload",
+      "sha256": "71effb11e956ab6ddaeb5f04f58c591061ad110f1688a7b443946638ae67cc8b"
+    },
+    {
+      "bytes": 7761,
+      "path": "tests/test_experiment4_controller.py",
+      "role": "source_payload",
+      "sha256": "a2230ed5b8ac1ae9fcc4f6f28fa7c1eb9be9e6423986025f38c1528809f18b3b"
+    },
+    {
+      "bytes": 4511,
+      "path": "tests/test_experiment5.py",
+      "role": "source_payload",
+      "sha256": "e49548e16c7d04c36c9047e45f62bae5f3d80083e5c134829cb85911139be9e2"
+    },
+    {
+      "bytes": 5989,
+      "path": "tests/test_experiment6.py",
+      "role": "source_payload",
+      "sha256": "ee7543a7cdc3abc2ceae06723ecad7cb54d66672adda40db96dd0ecb1fba1c09"
+    },
+    {
+      "bytes": 24092,
+      "path": "tests/test_figures.py",
+      "role": "source_payload",
+      "sha256": "4454056627974cb0615fac3e8ca066c09848984f4b008ff5e4d62711aaa1b48c"
+    },
+    {
+      "bytes": 19786,
+      "path": "tests/test_hardware.py",
+      "role": "source_payload",
+      "sha256": "5d930c0a6d838b9f5e06623c886247fe1be2b77ed22d022143ff9718ff029cc2"
+    },
+    {
+      "bytes": 6487,
+      "path": "tests/test_network.py",
+      "role": "source_payload",
+      "sha256": "4668f06e49089034522ff4a164a72a3da496aeed1cb0d9e44114c5af06b5ff7b"
+    },
+    {
+      "bytes": 20715,
+      "path": "tests/test_notebook_builder.py",
+      "role": "source_payload",
+      "sha256": "d8d8d1fdc453645ef44b9edb00ed5c9b9036b61934f4ae69f189773ed8e087f6"
+    },
+    {
+      "bytes": 12194,
+      "path": "tests/test_perception_scheduling.py",
+      "role": "source_payload",
+      "sha256": "dfe964e635d13b0f7a9138a59122e0e5719a5c9191280b9c535417ce062ea35a"
+    },
+    {
+      "bytes": 25486,
+      "path": "tests/test_policy_reducer.py",
+      "role": "source_payload",
+      "sha256": "f54818da2ab022340e55021ff111131d0bb4860c9c30992290220ea30776b954"
+    },
+    {
+      "bytes": 18481,
+      "path": "tests/test_registry.py",
+      "role": "source_payload",
+      "sha256": "4e0db6132ecde57116a843777261a9054581e8682f8a3a108badf7a46ef6443e"
+    },
+    {
+      "bytes": 6093,
+      "path": "tests/test_runtime.py",
+      "role": "source_payload",
+      "sha256": "09e708c59a6d72ed11ccb38bad9d8cfea831dffe974dca25fa4d65e2ccbff324"
+    },
+    {
+      "bytes": 3289,
+      "path": "tests/test_runtime_energy.py",
+      "role": "source_payload",
+      "sha256": "7c645915acc4c5b6d519b08ca611d24ff9d1762a6d8673a4e29325df08f732d0"
+    },
+    {
+      "bytes": 4041,
+      "path": "tests/test_statistics.py",
+      "role": "source_payload",
+      "sha256": "01365573b7c70aba6c92771ebd0b69ca937bf10ccc2d607c3c736270c011465c"
+    },
+    {
+      "bytes": 20103,
+      "path": "tests/test_strict_model_output.py",
+      "role": "source_payload",
+      "sha256": "547ee8cbfbfa644b895e61d2a12c4d99ea0061117c7cd8829cd5e301f6c639c1"
+    },
+    {
+      "bytes": 20444,
+      "path": "tests/test_transport_provenance.py",
+      "role": "source_payload",
+      "sha256": "a8f001ffcafc65fb1e9ce45fdc37707cc12f12008c3f66d86954d18c01aa116a"
+    },
+    {
+      "bytes": 19391,
+      "path": "tests/test_v3_deployment.py",
+      "role": "source_payload",
+      "sha256": "6dc62c2dcba777b5664767b6532b92cdf77e7afe1d463d0ace43372c7b989ba8"
+    },
+    {
+      "bytes": 1896,
+      "path": "tests/test_v3_raw_compatibility.py",
+      "role": "source_payload",
+      "sha256": "0f0e49073daffd56425cfdf2b4c4e29f0764fd5091fdc19c2661ddb3373cc26f"
+    },
+    {
+      "bytes": 22526,
+      "path": "tests/test_v3r2_corrections.py",
+      "role": "source_payload",
+      "sha256": "1834475a1ba4a68e8a914f8349ff8c8abd98777a504abc95e4e72469a9c63d5a"
+    },
+    {
+      "bytes": 15349,
+      "path": "tests/test_visdrone_config.py",
+      "role": "source_payload",
+      "sha256": "79c5a91c4ae67ffa95c24517c5424241e3ccddbe015dbe2f2d80ccfbe85e147e"
+    },
+    {
+      "bytes": 18294,
+      "path": "tests/test_visdrone_measurement.py",
+      "role": "source_payload",
+      "sha256": "dcb3e10b8afffe80d109d4aa6f0b5890c9dcc7066ac5087ee1ff1ac6307646e0"
+    },
+    {
+      "bytes": 47159,
+      "path": "tests/test_visdrone_models.py",
+      "role": "source_payload",
+      "sha256": "4fe76b07c2be820684ebc41f39f0a0fd55012277850deb9b9cff0bd449c2330e"
+    },
+    {
+      "bytes": 139930,
+      "path": "tests/test_visdrone_notebook_builder.py",
+      "role": "source_payload",
+      "sha256": "05f34ba380a8ba52419e7eb3f132257d19a906e70dc74029da130240070ab6c8"
+    },
+    {
+      "bytes": 15215,
+      "path": "tests/test_visdrone_paper.py",
+      "role": "source_payload",
+      "sha256": "8312fd7898023601f958f5e496334253e38f606049d45aa9a09900c6b51a0ffd"
+    },
+    {
+      "bytes": 13281,
+      "path": "tests/test_visdrone_proposal_backends.py",
+      "role": "source_payload",
+      "sha256": "7e69c81a640fd5f090bca789ef103e835b40cb80b0018bedf7d250d48e4bc940"
+    },
+    {
+      "bytes": 28057,
+      "path": "tests/test_visdrone_receiver_runtime.py",
+      "role": "source_payload",
+      "sha256": "104db3b7f4eef59ab5fc6cdf0db8dd6cbe7b6d96860f77a69b7aec7a77716b85"
+    },
+    {
+      "bytes": 25214,
+      "path": "tests/test_visdrone_receivers.py",
+      "role": "source_payload",
+      "sha256": "606c777156629a47a4b2bf9a6624c40709f9897b6db42a7756dad9b0904db687"
+    },
+    {
+      "bytes": 42242,
+      "path": "tests/test_visdrone_runner_contract.py",
+      "role": "source_payload",
+      "sha256": "aa6849669336d2731369424d75df37f1eec81ec68124bae146ff837183d49173"
+    },
+    {
+      "bytes": 17996,
+      "path": "tests/test_visdrone_temporal_sampling.py",
+      "role": "source_payload",
+      "sha256": "f3bd308e326daa9d1a2496947a53fe1ddb924f413a9ccde2371443e85b954c27"
+    },
+    {
+      "bytes": 55035,
+      "path": "tests/test_visdrone_v2r12_boundary_routing.py",
+      "role": "source_payload",
+      "sha256": "2eb8c2b32f2e9e24cf1dd6f295d2a5f184ca2c7a45009c5895fdcf0b6f28559d"
+    },
+    {
+      "bytes": 3100,
+      "path": "tests/test_visdrone_v2r13_boundary_routing.py",
+      "role": "source_payload",
+      "sha256": "22fabc2121ab926dfb7da412ea07e474117c33b99ec8bfe25014641853564076"
+    },
+    {
+      "bytes": 13298,
+      "path": "tests/test_visdrone_v2r13_low_evidence.py",
+      "role": "source_payload",
+      "sha256": "91a4e32c85533cc99c024622bc0c99b5de500e85139f401dbbd399ca02f68cd3"
+    },
+    {
+      "bytes": 13395,
+      "path": "tests/test_visdrone_v2r2_contract_guards.py",
+      "role": "source_payload",
+      "sha256": "3ec7d8f91f2f5349f052ffee5e8555bd1cdb6e8b8e14fae79634647cc41a9a39"
+    },
+    {
+      "bytes": 18326,
+      "path": "tests/test_visdrone_v2r2_moondream_route.py",
+      "role": "source_payload",
+      "sha256": "43a507b18c5d3ffce50511051d2ce54fbf65c21ea41d44f6464547aec946784a"
+    },
+    {
+      "bytes": 14568,
+      "path": "tests/test_visdrone_v2r2_qwen_serialization.py",
+      "role": "source_payload",
+      "sha256": "0632a37d94b506b725480046e84d149927de107b9e1e67dc65965608bc3c2a61"
+    },
+    {
+      "bytes": 9843,
+      "path": "tests/test_visdrone_v2r2_smoke_json_counts.py",
+      "role": "source_payload",
+      "sha256": "683ebb3d6e2e0fa8654d88671b94df6419a0b65bca795c7f918ad1d6194d8661"
+    },
+    {
+      "bytes": 6012,
+      "path": "tests/test_visdrone_v2r5_compact_contract.py",
+      "role": "source_payload",
+      "sha256": "bbeaa99c8e7233512b206ab288c90504ff95b0fbc06e1825da13b2d822bc4159"
+    },
+    {
+      "bytes": 16840,
+      "path": "tests/test_visdrone_v2r5_moondream_tokenizer_lock.py",
+      "role": "source_payload",
+      "sha256": "64b054407635799d426bc492c35d2897731fd431b23417294431a2f3b7ff86c9"
+    },
+    {
+      "bytes": 14481,
+      "path": "tests/test_visdrone_v2r5_subprocess_smoke.py",
+      "role": "source_payload",
+      "sha256": "8dfcc83c0ce0dfdcfd52a947b4ede18104ace02eb59fb581c13c0911cb15a817"
+    },
+    {
+      "bytes": 7162,
+      "path": "tests/test_visdrone_v2r6_model_lock_derivation.py",
+      "role": "source_payload",
+      "sha256": "4648d877012a886fd5a5380f87f75fee3c68949c4777f7031f8683fa421bd1e9"
+    },
+    {
+      "bytes": 4801,
+      "path": "tests/test_visdrone_v2r6_model_set_amendment.py",
+      "role": "source_payload",
+      "sha256": "ad5fd3bbaf419c2b99a12a8bcbb4219d8ab3dce0448a70b89abbabd173becb25"
+    },
+    {
+      "bytes": 16915,
+      "path": "tests/test_visdrone_v2r6_runner_model_binding.py",
+      "role": "source_payload",
+      "sha256": "58daca393ecde8f0e6b0cba53257583ed41df7bfc6171e511df42263a319e467"
+    },
+    {
+      "bytes": 9081,
+      "path": "tests/test_visdrone_v2r6_trusted_code_cache.py",
+      "role": "source_payload",
+      "sha256": "f5beec254c431e9e4aa463d7f6444ab37d8c9f00d6f957c2fff66a86c5788de0"
+    },
+    {
+      "bytes": 13551,
+      "path": "tests/test_visdrone_v2r9_recovery.py",
+      "role": "source_payload",
+      "sha256": "771496e9bb858bb40c0f2aa783774ce2ff17ac15dfb75764e8f01f9afa0eaa8d"
+    },
+    {
+      "bytes": 10884,
+      "path": "tests/test_visdrone_v3_experiment_flow.py",
+      "role": "source_payload",
+      "sha256": "6148a474c4567abc6416ead865d5fc50fc9a1f18d22208a223857fdcbcdac65c"
+    },
+    {
+      "bytes": 12765,
+      "path": "tests/test_visdrone_v3_notebook.py",
+      "role": "source_payload",
+      "sha256": "5419ef9691240c3e6bc6f35b626ae926800b288a71b9effc016babb208821da9"
+    },
+    {
+      "bytes": 4605,
+      "path": "tests/test_visdrone_v3_receiver_checkpoints.py",
+      "role": "source_payload",
+      "sha256": "e9d5a9d6a5669795d274c994d067041b21e4ac6e5d3d124ac76133fae0c53b07"
+    },
+    {
+      "bytes": 2592,
+      "path": "tests/test_visdrone_v3_recovery.py",
+      "role": "source_payload",
+      "sha256": "0b5bc748e7ff22295df9aa74aba21e83fadf536fa6d308c35f8f90da7d59d31c"
+    },
+    {
+      "bytes": 6788,
+      "path": "tests/test_visdrone_v3_video_geometry.py",
+      "role": "source_payload",
+      "sha256": "929a3135c18f85b70f9987d5da85c02cb0a9d2dd27f788fbcedc9bafda060156"
+    },
+    {
+      "bytes": 2756,
+      "path": "tests/test_visdrone_v3r1_test_import_isolation.py",
+      "role": "source_payload",
+      "sha256": "67c3b7cd4ac5b268febad19c7e44c852932580d9a9722f5b2d06a9bc384b711a"
+    },
+    {
+      "bytes": 60605,
+      "path": "tests/test_visdrone_workflow.py",
+      "role": "source_payload",
+      "sha256": "d7008d159fd48e3415433351cb9c5655e6986322bd145ed3b87989ff20eac216"
+    },
+    {
+      "bytes": 42743,
+      "path": "v3_deployment.py",
+      "role": "source_payload",
+      "sha256": "6387a868aaea9b3de36dca46d757ae1bb4d7b1b415e22dd01e6ab0d604ef604b"
+    },
+    {
+      "bytes": 3198,
+      "path": "v3r2_launch_env.py",
+      "role": "source_payload",
+      "sha256": "ad300f71916fae9cc5cf7f969a185876e1fd545a8777db1f0b5179b2086ca46c"
+    },
+    {
+      "bytes": 2394,
+      "path": "v3r2_preflight.py",
+      "role": "source_payload",
+      "sha256": "25c5fc35f213793d9aa05e73e0f5178c72f5a93f060bcbe6520df5ae34918eba"
+    }
+  ],
+  "payload_total_uncompressed_bytes": 5569601,
+  "predecessor": {
+    "archive_sha256": "5c5191b0bf439623bd868acc0a6222de44573c0c46416131e4842fff5b2f5636",
+    "deployment_receipt_sha256": "110fb6d8c061639746b807b76a5069ab76ceb453a88d4d90941ca368c9ae7c4e",
+    "operator_observed_stop": "Experiment 2 native-cache video encoder: height not divisible by 2 (1360x765)",
+    "release_id": "release_20260921_visdrone_paper_v2r13",
+    "release_manifest_sha256": "53dcc739804542fda76a65ce32d88d654e49e1d09f518c35de93ef18b407d8b3",
+    "runtime_receipt_bytes_available_locally": false
+  },
+  "raw_inference_recovery": {
+    "artifacts": 132,
+    "receipt_sha256": "6ca88cb5e82c8b33e27fd229443e233a48323d91fd73d0e79ec51ff8fc61a608",
+    "rows": 4152,
+    "scope": "authenticated_raw_v2r9_experiment1_only",
+    "source_bytes_included": false
+  },
+  "release_id": "release_20261013_visdrone_paper_v3r2",
+  "release_revision": "v3r2",
+  "run_name": "semuav_visdrone_v3r2",
+  "schema_version": "semuav.visdrone-v3-source-release.v1",
+  "software_validation_record": "VALIDATION_REPORT.md",
+  "study_entrypoint": "SemUAV_VLM_VisDrone_Paper_Study.ipynb",
+  "v3r1_source_correction": {
+    "correction_scope": "test-helper imports isolated from third-party tests package namespace",
+    "cpu_acceptance_gate_bypassed": false,
+    "failed_v3_deployment_receipt_required": false,
+    "failed_v3_source_and_logs_preserved": true,
+    "operator_observed_cpu_test_run": {
+      "errors": 3,
+      "failures": 0,
+      "tests_run": 568
+    },
+    "scientific_producer_or_experimental_design_changed_from_v3": false,
+    "superseded_archive_sha256": "25b9a80da04e95d15ddc9a46ca8de0682e377def9913c768f67b38db0b3e83ae",
+    "supersedes_source_release": "release_20260928_visdrone_paper_v3"
+  },
+  "v3r2_pre_test_amendment": {
+    "calibration_gate": "measured FAIL retained; routes to H4 NOT_ESTIMABLE when the frozen controller cannot consume confidence",
+    "predecessor_code_sha256": "7bb899d11e95b5780278fe38ca653dad34e71137e2f296c7a72056586711db98",
+    "predecessor_release_id": "release_20260928_visdrone_paper_v3r1",
+    "predecessor_run_name": "semuav_visdrone_v3r1",
+    "protocol_frozen_before_amendment": false,
+    "raw_inference_producer_and_measurement_sources_changed": false,
+    "receipted_v3r1_corrections_in_source": [
+      "experiment3_episode_key_merge",
+      "policy_reducer_usecols_order",
+      "l0_l2_cbor_wire_format_and_rate_screened_best_fixed",
+      "calibration_aware_controller_with_class_balanced_profiles"
+    ],
+    "record": "PRE_TEST_CALIBRATION_GATE_AMENDMENT_20261013_V3R2.md",
+    "untouched_test_accessed": false,
+    "validation_reuse": "exact hash-verified v3r1 stages for unchanged producers; Experiment 4 recomputed"
+  }
+}

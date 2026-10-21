@@ -1,0 +1,1425 @@
+{
+  "archive_member_count": 116,
+  "archive_name": "SemUAV-VLM-VisDrone-Paper-Study-20260921-v2r13.zip",
+  "archive_scope": "source_only_post_v2r12_low_evidence_packet_correction_with_deployment_frozen_v2r9_raw_experiment1_recovery_no_empirical_results",
+  "authenticated_predecessor_v2r10": {
+    "active_model_set_sha256": "6f83118bb62cd68c98e9ee2afd947022c04088b9329a0eeef832eba17c2fb08c",
+    "archive_member_count": 110,
+    "archive_path": "/data/Lane Detection Datasets/musta/semuav_vlm/incoming/SemUAV-VLM-VisDrone-Paper-Study-20260921-v2r10.zip",
+    "archive_sha256": "f35723efcbda801bc1c3a8796e2fa6603b8d8bcacdcf66b7186df8d7a314af6a",
+    "builder_sha256": "09478e1f93768d80b589110e45edc05fa0c1cb3cd63bbf6e6e29ed15a27a73ab",
+    "checksum_inventory_sha256": "53bd76f3ffd5510b0d8c8cef6bfb82a6bdf63562c6dadd08c849d224e3513649",
+    "deployer_path": "/data/Lane Detection Datasets/musta/semuav_vlm/incoming/deploy_semuav_visdrone_v2r10_20260921.sh",
+    "deployer_sha256": "e8b49ea192b955bf07f8b53a0f6130f3eb0bd182c3a1ea28ede6f10e89bf79cf",
+    "deployment_receipt": "/data/Lane Detection Datasets/musta/semuav_vlm/private/visdrone_v2r10_deployment/DEPLOYMENT_READY.json",
+    "deployment_receipt_sha256": "95a64dad33ae9fa21974b8ba629bc9ec972ad989245bef5b38df42b00b2fb2e3",
+    "experiment1_recovery_artifact_count": 132,
+    "experiment1_recovery_receipt": "/data/Lane Detection Datasets/musta/semuav_vlm/private/visdrone_v2r10_deployment/V2R9_EXP1_RECOVERY_SOURCE.json",
+    "experiment1_recovery_receipt_bytes": 37416,
+    "experiment1_recovery_receipt_sha256": "6ca88cb5e82c8b33e27fd229443e233a48323d91fd73d0e79ec51ff8fc61a608",
+    "experiment1_recovery_row_count": 4152,
+    "notebook_sha256": "f35bde4c03536b97bf82ab719ad5a516225bcc321d5a878971410b4e86a16108",
+    "payload_file_count": 108,
+    "payload_total_uncompressed_bytes": 4009068,
+    "release_id": "release_20260921_visdrone_paper_v2r10",
+    "release_manifest_sha256": "99323dd6109eca6d4942a120a3bb383f077d4a8f95869169f57f75e57574ac3c",
+    "release_path": "/data/Lane Detection Datasets/musta/semuav_vlm/releases/release_20260921_visdrone_paper_v2r10/SemUAV-VLM-VisDrone-Paper-Study",
+    "requirements_sha256": "028a2757d2e1565db90ff26a26fd6e564bd592c868ed093d632cb930d438dfa5",
+    "run_name": "semuav_visdrone_v2r10",
+    "runtime_smoke_all_passed": true,
+    "runtime_smoke_pass_count": 3,
+    "scientific_environment_sealed": true,
+    "unchanged_after_deployment_actions": true,
+    "untouched_test_accessed": false,
+    "validation_experiments_started": false
+  },
+  "authenticated_predecessor_v2r11": {
+    "active_model_set_sha256": "6f83118bb62cd68c98e9ee2afd947022c04088b9329a0eeef832eba17c2fb08c",
+    "archive_member_count": 111,
+    "archive_path": "/data/Lane Detection Datasets/musta/semuav_vlm/incoming/SemUAV-VLM-VisDrone-Paper-Study-20260921-v2r11.zip",
+    "archive_sha256": "737c168c8710d9f111f13ce138fefc9b3dc2f2bc4da9fc858a3cc11e76c465b8",
+    "builder_sha256": "c2edf8ebec76727fcaf2d785c01a3555704d4b5b639b8c373021588b1acd1447",
+    "checksum_inventory_sha256": "a761c0f0ae1f8d1ded79d388885f25c7dc4766cf94fe41b7120aa24d620e6ab0",
+    "deployer_path": "/data/Lane Detection Datasets/musta/semuav_vlm/incoming/deploy_semuav_visdrone_v2r11_20260921.sh",
+    "deployer_sha256": "ee4ce4ad394e46eb85d4c83040f9f95020bf685436e06a2dfc1b8411d5905bb5",
+    "deployment_receipt": "/data/Lane Detection Datasets/musta/semuav_vlm/private/visdrone_v2r11_deployment/DEPLOYMENT_READY.json",
+    "deployment_receipt_sha256": "befdce3067b571933dd94d35758c2c29385a06a8bb02ea93ae681117dcc17f3e",
+    "experiment1_recovery_artifact_count": 132,
+    "experiment1_recovery_receipt": "/data/Lane Detection Datasets/musta/semuav_vlm/private/visdrone_v2r10_deployment/V2R9_EXP1_RECOVERY_SOURCE.json",
+    "experiment1_recovery_receipt_bytes": 37416,
+    "experiment1_recovery_receipt_sha256": "6ca88cb5e82c8b33e27fd229443e233a48323d91fd73d0e79ec51ff8fc61a608",
+    "experiment1_recovery_row_count": 4152,
+    "notebook_sha256": "9b6b4d4585036d0d2c45df1fce21af0f4a08fbcc90f9406cdeefb4c690b2154c",
+    "payload_file_count": 109,
+    "payload_total_uncompressed_bytes": 4063633,
+    "release_id": "release_20260921_visdrone_paper_v2r11",
+    "release_manifest_sha256": "b98c11aefe1617e6d2bffcaf9107b0708d31f45040db76d959a8c6664d7ee2ec",
+    "release_path": "/data/Lane Detection Datasets/musta/semuav_vlm/releases/release_20260921_visdrone_paper_v2r11/SemUAV-VLM-VisDrone-Paper-Study",
+    "requirements_sha256": "028a2757d2e1565db90ff26a26fd6e564bd592c868ed093d632cb930d438dfa5",
+    "run_name": "semuav_visdrone_v2r11",
+    "runtime_smoke_run": false,
+    "scientific_environment_sealed": false,
+    "scientific_experiments_started": false,
+    "scientific_validation_authorized": false,
+    "source_deployment_ready": true,
+    "unchanged_after_deployment_actions": true,
+    "untouched_test_accessed": false,
+    "validation_experiments_started": false
+  },
+  "authenticated_predecessor_v2r12": {
+    "active_model_lock_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r12/frozen_inputs/MODEL_LOCK.json",
+    "active_model_lock_sha256": "16bfbc1d2365ac0a0adb2ff20d2f5785fa3f1b05675159304aedf4c6f7c1cd2a",
+    "active_model_set_sha256": "6f83118bb62cd68c98e9ee2afd947022c04088b9329a0eeef832eba17c2fb08c",
+    "archive_member_count": 113,
+    "archive_path": "/data/Lane Detection Datasets/musta/semuav_vlm/incoming/SemUAV-VLM-VisDrone-Paper-Study-20260921-v2r12.zip",
+    "archive_sha256": "a53600fff9f50174af6c4ed17352900981cd9684333c4a54749a427be7a1bdc3",
+    "builder_sha256": "799c5fc179fd6e5c4e62ec6dae081528ba5cddbc123a5647c526f80f1ebdbc00",
+    "checksum_inventory_sha256": "8fd90b8ba5f32bc0da435119db9bff09fd7c908b6388887e67cfa430b8266285",
+    "deployer_path": "/data/Lane Detection Datasets/musta/semuav_vlm/incoming/deploy_semuav_visdrone_v2r12_20260921.sh",
+    "deployer_sha256": "622699a1634429d30e8bd4a1a9817ead0b28f99fad46b2fc36726d6246552d4b",
+    "deployment_receipt": "/data/Lane Detection Datasets/musta/semuav_vlm/private/visdrone_v2r12_deployment/DEPLOYMENT_READY.json",
+    "deployment_receipt_sha256": "889850427153f9559fc038e2f10df174874dd59e8bff0473f61dcce1b62d2463",
+    "experiment1_recovery_artifact_count": 132,
+    "experiment1_recovery_receipt": "/data/Lane Detection Datasets/musta/semuav_vlm/private/visdrone_v2r10_deployment/V2R9_EXP1_RECOVERY_SOURCE.json",
+    "experiment1_recovery_receipt_bytes": 37416,
+    "experiment1_recovery_receipt_sha256": "6ca88cb5e82c8b33e27fd229443e233a48323d91fd73d0e79ec51ff8fc61a608",
+    "experiment1_recovery_row_count": 4152,
+    "inference_environment_fingerprint_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r12/frozen_inputs/INFERENCE_ENVIRONMENT_FINGERPRINT.json",
+    "inference_environment_fingerprint_sha256": "39d293199a08ada1465ca335fb9481d7e7548ad20d4ab26493c68910ed771f81",
+    "inference_pip_freeze_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r12/frozen_inputs/INFERENCE_PIP_FREEZE.txt",
+    "inference_pip_freeze_sha256": "5b6aacbcd2b891c1bf968511d17b3385aff2233e99d0bae440f81bc7f977d5d2",
+    "model_lock_derivation_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r12/frozen_inputs/MODEL_LOCK_DERIVATION.json",
+    "model_lock_derivation_sha256": "14b0623dd68166608a7f27ee55a2e87ee945ae3fd28e8b72daff472c4ff99de7",
+    "model_status": {
+      "qwen3_vl_2b": "PASS",
+      "qwen3_vl_8b_upper_bound": "PASS",
+      "smolvlm2_2b": "PASS"
+    },
+    "notebook_sha256": "06b47108768a7ce566ddf480f285148f15797a87055d46e6d179e15aa69a3e80",
+    "payload_file_count": 111,
+    "payload_total_uncompressed_bytes": 4188275,
+    "release_id": "release_20260921_visdrone_paper_v2r12",
+    "release_manifest_sha256": "69bfb381877a419c698ba381f2af637208462ae764dd2f1b8abbb9c8c92729d5",
+    "release_path": "/data/Lane Detection Datasets/musta/semuav_vlm/releases/release_20260921_visdrone_paper_v2r12/SemUAV-VLM-VisDrone-Paper-Study",
+    "requirements_sha256": "028a2757d2e1565db90ff26a26fd6e564bd592c868ed093d632cb930d438dfa5",
+    "reused_artifacts_receipt_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r12/frozen_inputs/REUSED_V1_FROZEN_ARTIFACTS.json",
+    "reused_artifacts_receipt_sha256": "68839ef0f3d3cf5b52a4b986c4fb24e0238f40b3bce44e13e45d6106ca22b811",
+    "run_name": "semuav_visdrone_v2r12",
+    "runtime_smoke_all_passed": true,
+    "runtime_smoke_failure_count": 0,
+    "runtime_smoke_input_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r12/frozen_inputs/MODEL_RUNTIME_SMOKE_INPUT.json",
+    "runtime_smoke_input_sha256": "f08a98d1b5f094c1254bbd1ce7a80d13de24d74bc544ddbe2151ff04f7160b1f",
+    "runtime_smoke_isolation_schema": "semuav.runtime-smoke-subprocess.v2",
+    "runtime_smoke_pass_count": 3,
+    "runtime_smoke_report_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r12/frozen_inputs/MODEL_RUNTIME_SMOKE.json",
+    "runtime_smoke_report_sha256": "0d43d5045adb0d3bea3aca2650ca8c832c076e60932c6662dbcd0abb13799fb2",
+    "runtime_smoke_run": true,
+    "runtime_smoke_schema_version": 4,
+    "scientific_environment_seal_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r12/frozen_inputs/INFERENCE_ENVIRONMENT_SEAL.json",
+    "scientific_environment_seal_sha256": "fa7fbaaa0b16090e48724389b455ad5d8e21490d0af4e14f55d62557bfab81d7",
+    "scientific_environment_sealed": true,
+    "scientific_experiments_started": true,
+    "scientific_validation_authorized": true,
+    "source_deployment_ready": true,
+    "trusted_code_cache_receipt_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r12/frozen_inputs/TRUSTED_CODE_CACHE.json",
+    "trusted_code_cache_receipt_sha256": "c2b821ad0c04b6eb1bbc5d11f505361a55cea29ca046309f47f4b521a900e2f5",
+    "unchanged_after_deployment_actions": true,
+    "untouched_test_accessed": false,
+    "validation_experiments_started": true
+  },
+  "authenticated_predecessor_v2r9": {
+    "active_model_lock_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/MODEL_LOCK.json",
+    "active_model_lock_sha256": "340dd59ca55a9be491ac806b50f9778a12d2b0b4a447485627aaf422dda05353",
+    "active_model_set_sha256": "6f83118bb62cd68c98e9ee2afd947022c04088b9329a0eeef832eba17c2fb08c",
+    "archive_path": "/data/Lane Detection Datasets/musta/semuav_vlm/incoming/SemUAV-VLM-VisDrone-Paper-Study-20260920-v2r9.zip",
+    "archive_sha256": "73b94ea64ac21fc61c7a3e0cec1038397c6dfc327c58d962ac96dd3052e48cf7",
+    "checksum_inventory_sha256": "2df86df69fa36ae975f4f380b851dcd6fb28a59ff7868ff45f73f6dc806bd7dc",
+    "deployer_path": "/data/Lane Detection Datasets/musta/semuav_vlm/incoming/deploy_semuav_visdrone_v2r9_20260920.sh",
+    "deployer_sha256": "3f6b863284313418bf21097bfa0e548f19b22fef11db1175560e09f9b3b48f28",
+    "deployment_receipt": "/data/Lane Detection Datasets/musta/semuav_vlm/private/visdrone_v2r9_deployment/DEPLOYMENT_READY.json",
+    "deployment_receipt_sha256": "b5962f818a3ffa616e24bbf3ce188c150eeed0c0401ca101e9c483e2b13aef27",
+    "inference_environment_fingerprint_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/INFERENCE_ENVIRONMENT_FINGERPRINT.json",
+    "inference_environment_fingerprint_sha256": "424c57628cfbab7b15ce5546af997e6773db75ab8ea72274d0b76ccd827d5c10",
+    "inference_pip_freeze_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/INFERENCE_PIP_FREEZE.txt",
+    "inference_pip_freeze_sha256": "5b6aacbcd2b891c1bf968511d17b3385aff2233e99d0bae440f81bc7f977d5d2",
+    "model_lock_derivation_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/MODEL_LOCK_DERIVATION.json",
+    "model_lock_derivation_sha256": "947c5e1ad828eed9beaf6538f227fd871b406f3fab11bf6ce7202dabf23749b0",
+    "model_status": {
+      "qwen3_vl_2b": "PASS",
+      "qwen3_vl_8b_upper_bound": "PASS",
+      "smolvlm2_2b": "PASS"
+    },
+    "release_id": "release_20260920_visdrone_paper_v2r9",
+    "release_manifest_sha256": "c63bddc8676d05d5ee9a3f196daa407681177fb980385c4750fb60536baf7efd",
+    "release_path": "/data/Lane Detection Datasets/musta/semuav_vlm/releases/release_20260920_visdrone_paper_v2r9/SemUAV-VLM-VisDrone-Paper-Study",
+    "reused_artifacts_receipt_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/REUSED_V1_FROZEN_ARTIFACTS.json",
+    "reused_artifacts_receipt_sha256": "ab90dc31f7bf9ae7957316f3e36058991272d78a8db1b729d68346bca46dab78",
+    "run_name": "semuav_visdrone_v2r9",
+    "runtime_smoke_all_passed": true,
+    "runtime_smoke_failure_count": 0,
+    "runtime_smoke_input_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/MODEL_RUNTIME_SMOKE_INPUT.json",
+    "runtime_smoke_input_sha256": "a3c9d33c87d2b620acd41be55d5b5494cdb75bcbe6a0abb82a5f625cce4674e1",
+    "runtime_smoke_isolation_schema": "semuav.runtime-smoke-subprocess.v2",
+    "runtime_smoke_pass_count": 3,
+    "runtime_smoke_report_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/MODEL_RUNTIME_SMOKE.json",
+    "runtime_smoke_report_sha256": "7642b89cd36a87faafc62c44e88baec5bb45d3ea8d7c3438e2ad0293aab585b5",
+    "runtime_smoke_schema_version": 4,
+    "scientific_environment_seal_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/INFERENCE_ENVIRONMENT_SEAL.json",
+    "scientific_environment_seal_sha256": "01f18450cac8bc5d1edf4dd45cf7302e0b2903d53609e0850cddf723bbf69ec3",
+    "trusted_code_cache_receipt_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/TRUSTED_CODE_CACHE.json",
+    "trusted_code_cache_receipt_sha256": "ad45cd62384697243de0391bc929b05356ba4252d80fd93854f5d1a90d4a55ed",
+    "unchanged_after_deployment_actions": true
+  },
+  "candidate_environment": {
+    "active_source_release_id": "release_20260921_visdrone_paper_v2r13",
+    "candidate_environment": "/data/Lane Detection Datasets/musta/semuav_vlm/venvs/release_20260912_visdrone_inference_candidate_v2r3",
+    "candidate_environment_reused": true,
+    "candidate_rebuild_required": false,
+    "candidate_requirements_changed": false,
+    "fresh_environment_required": false,
+    "package_installation_required": false,
+    "predecessor_smoke_rows_reused": false,
+    "ready_receipt": "/data/Lane Detection Datasets/musta/semuav_vlm/venvs/release_20260912_visdrone_inference_candidate_v2r3/SEMUAV_CANDIDATE_READY.json",
+    "receipt_source_release_id": "release_20260912_visdrone_paper_v2r3",
+    "requirements_identical_to_candidate_source": true,
+    "reused_from_release_id": "release_20260912_visdrone_paper_v2r3"
+  },
+  "configuration": "configs/visdrone_paper.yaml",
+  "created_at_utc": "2026-09-21T00:00:00+00:00",
+  "dataset": {
+    "expected_external_path": "/data/Lane Detection Datasets/musta/semuav_vlm/data/VisDrone",
+    "name": "VisDrone2019",
+    "operator_verified_files": 51023,
+    "operator_verified_size_gb": 14.041187,
+    "registered_components": [
+      "det_train",
+      "det_val",
+      "det_test_dev",
+      "mot_train",
+      "mot_val",
+      "mot_test_dev"
+    ]
+  },
+  "dataset_material_included": false,
+  "empirical_results_included": false,
+  "excluded_material": [
+    "deliverables",
+    "caches",
+    "execution_outputs",
+    "empirical_results"
+  ],
+  "experiment1_recovery": {
+    "artifact_count": 132,
+    "deployment_status": "PENDING_HASH_BOUND_REMOTE_FREEZE",
+    "derived_results_recomputed": true,
+    "downstream_results_recomputed": true,
+    "imported_scope": "raw_experiment1_detector_and_vlm_shards_only",
+    "inference_row_count": 4152,
+    "predecessor_code_sha256": "fbf80e5ec3067ff8ca9c150c71a0ec2a3bcf5cffe9ec3663bb79c973789bdf76",
+    "predecessor_config_sha256_prefix": "d799763aef",
+    "predecessor_model_lock_sha256": "340dd59ca55a9be491ac806b50f9778a12d2b0b4a447485627aaf422dda05353",
+    "predecessor_release_id": "release_20260920_visdrone_paper_v2r9",
+    "predecessor_run_name": "semuav_visdrone_v2r9",
+    "schema_version": "semuav.visdrone-v2r9-exp1-recovery.v1",
+    "untouched_test_accessed": false
+  },
+  "historical_predecessor_runtime_acceptance_correction": "PRE_VALIDATION_RUNTIME_CORRECTION_20260913_V2R5.md",
+  "hypothesis_design_status": {
+    "H1": "ESTIMABLE_BY_DESIGN_COMPOSED_PIPELINE",
+    "H2": "STRUCTURAL_NOT_ESTIMABLE_15_GROUPS_450_CELLS",
+    "H3": "STRUCTURAL_NOT_ESTIMABLE_BELOW_POSITIVE_NEGATIVE_GROUP_MINIMA",
+    "H4": "ESTIMABLE_ONLY_IF_BOTH_FROZEN_COMPOSED_PIPELINE_DENOMINATOR_GATES_PASS",
+    "H5": "NOT_APPLICABLE_NO_TARGET_EVIDENCE"
+  },
+  "methodology": {
+    "acceptance_recovery_isolation": "PRE_VALIDATION_ACCEPTANCE_RECOVERY_ISOLATION_20260921_V2R11.md",
+    "active_model_count": 3,
+    "active_model_ids": [
+      "qwen3_vl_2b",
+      "smolvlm2_2b",
+      "qwen3_vl_8b_upper_bound"
+    ],
+    "compact_selection_candidate_count": 2,
+    "compact_selection_candidate_ids": [
+      "qwen3_vl_2b",
+      "smolvlm2_2b"
+    ],
+    "excluded_model_ids": [
+      "moondream2"
+    ],
+    "experiment1_recovery_schema": "semuav.visdrone-v2r9-exp1-recovery.v1",
+    "experiment1_recovery_scope": "raw_experiment1_detector_and_vlm_shards_only",
+    "generation_policy_sha256": "1f73c410bf46c1012a66c204a574db47ff918b1c75f091db42196ef47ff69407",
+    "generation_policy_version": "semuav.visdrone-generation-policy.v5",
+    "huggingface_cache_root": "/data/Lane Detection Datasets/musta/semuav_vlm/.cache/huggingface",
+    "legacy_environment_policy": "forensic_only_do_not_use",
+    "low_evidence_packet_correction": "PRE_VALIDATION_LOW_EVIDENCE_PACKET_CORRECTION_20260921_V2R13.md",
+    "measurement_schema_version": "semuav.repeated-inference-measurement.v2",
+    "model_decision_contract": "semuav.visdrone-proposal-decision.v2",
+    "model_decision_prompt": "prompts/visdrone_proposal_decision_v3.txt",
+    "model_lock_derivation_receipt": "MODEL_LOCK_DERIVATION.json",
+    "model_max_new_tokens": 256,
+    "native_receiver_control_context_schema": "semuav.visdrone-receiver-control.v2",
+    "native_receiver_correction": "PRE_VALIDATION_NATIVE_RECEIVER_RECOVERY_20260921_V2R10.md",
+    "native_receiver_fusion_policy_version": "semuav.visdrone-native-fusion.v3",
+    "next_scientific_gate": "exact_three_of_three_development_runtime_smoke",
+    "predecessor_boundary_routing_correction": "PRE_SMOKE_PREDECESSOR_BOUNDARY_ROUTING_CORRECTION_20260921_V2R12.md",
+    "proposal_limit": 32,
+    "qwen_generation_strategy": "qwen_open_brace_assistant_continuation",
+    "runner_version": "semuav.visdrone-paper-runner.v7",
+    "runtime_import_correction": "PRE_VALIDATION_RUNTIME_CORRECTION_20260914_V2R8.md",
+    "runtime_metadata_correction": "PRE_VALIDATION_RUNTIME_CORRECTION_20260920_V2R9.md",
+    "runtime_smoke_input_schema": "semuav.model-runtime-smoke-input.v3",
+    "runtime_smoke_isolation_schema": "semuav.runtime-smoke-subprocess.v2",
+    "runtime_smoke_report_schema_version": 4,
+    "runtime_smoke_worker_input_schema": "semuav.runtime-smoke-worker-input.v2",
+    "runtime_smoke_worker_result_schema": "semuav.runtime-smoke-worker-result.v2",
+    "selection_estimand": "group_equal_critical_action_plus_object_exact_v2",
+    "semantic_architecture": "detector_plus_bounded_vlm_verifier_plus_deterministic_host_composer_v2",
+    "smolvlm_assistant_prefix": "{\"",
+    "smolvlm_assistant_prefix_characters": 2,
+    "smolvlm_generation_strategy": "smol_native_double_quote_assistant_prefix",
+    "temporal_observations_per_sequence": 64,
+    "temporal_sampling_amendment": "PRE_EXPERIMENT_TEMPORAL_FEASIBILITY_AMENDMENT_20260914_V2R7.md",
+    "temporal_source_frame_stride": 1,
+    "temporal_target_rate_hz": 5,
+    "temporal_test_sequences": 15,
+    "temporal_validation_sequences": 7,
+    "trusted_code_cache_receipt_schema": "semuav.visdrone-trusted-code-cache.v2",
+    "trusted_code_cache_root": "/data/Lane Detection Datasets/musta/semuav_vlm/.cache/huggingface/modules-v2r13",
+    "trusted_remote_code_policy": "empty_inventory_no_active_trusted_remote_code",
+    "wire_packet_contract": "semuav.v1"
+  },
+  "methodology_amendment": "METHODOLOGY_AMENDMENT_20260908.md",
+  "model_set_amendment": {
+    "active_model_ids": [
+      "qwen3_vl_2b",
+      "smolvlm2_2b",
+      "qwen3_vl_8b_upper_bound"
+    ],
+    "amendment": "PRE_VALIDATION_MODEL_SET_AMENDMENT_20260914_V2R6.md",
+    "excluded_model_ids": [
+      "moondream2"
+    ],
+    "fresh_smoke_required": true,
+    "predecessor_moondream_status": "FAIL_SCHEMA",
+    "predecessor_pass_count": 3,
+    "predecessor_release_id": "release_20260913_visdrone_paper_v2r5",
+    "predecessor_rows_reused": false,
+    "predecessor_smoke_all_passed": false,
+    "schema_version": "semuav.visdrone-v2r6-model-set-amendment.v1"
+  },
+  "notebook_builder": "build_visdrone_paper_notebook.py",
+  "operational_correction": {
+    "additional_source_authenticated_pre_execution_hardening": {
+      "affected_path": "ReceiverControlContext -> RegisteredVisDroneNativeReceiver._frame_action -> InferenceRequest",
+      "corrected_control_context_schema": "semuav.visdrone-receiver-control.v2",
+      "correction": "bind_authoritative_capture_time_and_flight_telemetry_into_L3_and_visual_detector_requests",
+      "discovery": "v2r10_end_to_end_regression_before_scientific_execution",
+      "invented_telemetry_values_allowed": false,
+      "predecessor_control_context_schema": "semuav.visdrone-receiver-control.v1",
+      "regression_coverage": [
+        "l3_fuses_authenticated_roi_pixels_with_transmitted_semantics",
+        "registered_context_binds_authoritative_time_and_telemetry",
+        "registered_context_rejects_telemetry_context_disagreement",
+        "registered_receiver_builds_l0_through_video_cache_with_provenance"
+      ],
+      "requirements_changed": false,
+      "schema_version": "semuav.visdrone-v2r10-native-l3-authoritative-context.v1",
+      "scientific_contract_changed": false
+    },
+    "amendment_record": "PRE_VALIDATION_NATIVE_RECEIVER_RECOVERY_20260921_V2R10.md",
+    "amendment_record_sha256": "84510ede90584161c6254e530b68977b070097837197d31e64b50a6925380bec",
+    "correction_kind": "strict_variant_specific_native_semantic_receiver_and_authoritative_visual_detector_request_context",
+    "experiment1_recovery": {
+      "artifact_count": 132,
+      "deployment_status": "PENDING_HASH_BOUND_REMOTE_FREEZE",
+      "derived_results_recomputed": true,
+      "downstream_results_recomputed": true,
+      "imported_scope": "raw_experiment1_detector_and_vlm_shards_only",
+      "inference_row_count": 4152,
+      "predecessor_code_sha256": "fbf80e5ec3067ff8ca9c150c71a0ec2a3bcf5cffe9ec3663bb79c973789bdf76",
+      "predecessor_config_sha256_prefix": "d799763aef",
+      "predecessor_model_lock_sha256": "340dd59ca55a9be491ac806b50f9778a12d2b0b4a447485627aaf422dda05353",
+      "predecessor_release_id": "release_20260920_visdrone_paper_v2r9",
+      "predecessor_run_name": "semuav_visdrone_v2r9",
+      "schema_version": "semuav.visdrone-v2r9-exp1-recovery.v1",
+      "untouched_test_accessed": false
+    },
+    "model_or_metric_outcomes_used": false,
+    "predecessor_evidence": {
+      "active_model_lock_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/MODEL_LOCK.json",
+      "active_model_lock_sha256": "340dd59ca55a9be491ac806b50f9778a12d2b0b4a447485627aaf422dda05353",
+      "active_model_set_sha256": "6f83118bb62cd68c98e9ee2afd947022c04088b9329a0eeef832eba17c2fb08c",
+      "archive_path": "/data/Lane Detection Datasets/musta/semuav_vlm/incoming/SemUAV-VLM-VisDrone-Paper-Study-20260920-v2r9.zip",
+      "archive_sha256": "73b94ea64ac21fc61c7a3e0cec1038397c6dfc327c58d962ac96dd3052e48cf7",
+      "checksum_inventory_sha256": "2df86df69fa36ae975f4f380b851dcd6fb28a59ff7868ff45f73f6dc806bd7dc",
+      "deployer_path": "/data/Lane Detection Datasets/musta/semuav_vlm/incoming/deploy_semuav_visdrone_v2r9_20260920.sh",
+      "deployer_sha256": "3f6b863284313418bf21097bfa0e548f19b22fef11db1175560e09f9b3b48f28",
+      "deployment_receipt": "/data/Lane Detection Datasets/musta/semuav_vlm/private/visdrone_v2r9_deployment/DEPLOYMENT_READY.json",
+      "deployment_receipt_sha256": "b5962f818a3ffa616e24bbf3ce188c150eeed0c0401ca101e9c483e2b13aef27",
+      "inference_environment_fingerprint_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/INFERENCE_ENVIRONMENT_FINGERPRINT.json",
+      "inference_environment_fingerprint_sha256": "424c57628cfbab7b15ce5546af997e6773db75ab8ea72274d0b76ccd827d5c10",
+      "inference_pip_freeze_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/INFERENCE_PIP_FREEZE.txt",
+      "inference_pip_freeze_sha256": "5b6aacbcd2b891c1bf968511d17b3385aff2233e99d0bae440f81bc7f977d5d2",
+      "model_lock_derivation_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/MODEL_LOCK_DERIVATION.json",
+      "model_lock_derivation_sha256": "947c5e1ad828eed9beaf6538f227fd871b406f3fab11bf6ce7202dabf23749b0",
+      "model_status": {
+        "qwen3_vl_2b": "PASS",
+        "qwen3_vl_8b_upper_bound": "PASS",
+        "smolvlm2_2b": "PASS"
+      },
+      "release_id": "release_20260920_visdrone_paper_v2r9",
+      "release_manifest_sha256": "c63bddc8676d05d5ee9a3f196daa407681177fb980385c4750fb60536baf7efd",
+      "release_path": "/data/Lane Detection Datasets/musta/semuav_vlm/releases/release_20260920_visdrone_paper_v2r9/SemUAV-VLM-VisDrone-Paper-Study",
+      "reused_artifacts_receipt_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/REUSED_V1_FROZEN_ARTIFACTS.json",
+      "reused_artifacts_receipt_sha256": "ab90dc31f7bf9ae7957316f3e36058991272d78a8db1b729d68346bca46dab78",
+      "run_name": "semuav_visdrone_v2r9",
+      "runtime_smoke_all_passed": true,
+      "runtime_smoke_failure_count": 0,
+      "runtime_smoke_input_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/MODEL_RUNTIME_SMOKE_INPUT.json",
+      "runtime_smoke_input_sha256": "a3c9d33c87d2b620acd41be55d5b5494cdb75bcbe6a0abb82a5f625cce4674e1",
+      "runtime_smoke_isolation_schema": "semuav.runtime-smoke-subprocess.v2",
+      "runtime_smoke_pass_count": 3,
+      "runtime_smoke_report_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/MODEL_RUNTIME_SMOKE.json",
+      "runtime_smoke_report_sha256": "7642b89cd36a87faafc62c44e88baec5bb45d3ea8d7c3438e2ad0293aab585b5",
+      "runtime_smoke_schema_version": 4,
+      "scientific_environment_seal_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/INFERENCE_ENVIRONMENT_SEAL.json",
+      "scientific_environment_seal_sha256": "01f18450cac8bc5d1edf4dd45cf7302e0b2903d53609e0850cddf723bbf69ec3",
+      "trusted_code_cache_receipt_path": "/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v2r9/frozen_inputs/TRUSTED_CODE_CACHE.json",
+      "trusted_code_cache_receipt_sha256": "ad45cd62384697243de0391bc929b05356ba4252d80fd93854f5d1a90d4a55ed",
+      "unchanged_after_deployment_actions": true
+    },
+    "predecessor_observed_terminal_boundary": {
+      "correction_record": "PRE_VALIDATION_NATIVE_RECEIVER_RECOVERY_20260921_V2R10.md",
+      "correction_record_sha256": "84510ede90584161c6254e530b68977b070097837197d31e64b50a6925380bec",
+      "evidence_model": "source_authenticated_defect_separate_from_operator_observed_execution",
+      "operator_observed_execution": {
+        "detector_prerequisite_completed": true,
+        "detector_residency_receipt_written": true,
+        "detector_stage_cache_written": true,
+        "eligible_validation_sequences": 7,
+        "evidence_level": "operator_observed_terminal_output_not_persisted_in_v2r9_deployment_receipt",
+        "exact_eligible_capacity_recomputed": true,
+        "experiment2_frontier_completed": false,
+        "experiments_3_to_7_started": false,
+        "failure_exception_type": "StudyGateError",
+        "failure_message": "Decoded semantic packet has unregistered action for visdrone:det_train:0000030_00754_d_0000036:profile:general_mobility",
+        "failure_sample_id": "visdrone:det_train:0000030_00754_d_0000036:profile:general_mobility",
+        "failure_stage": "first_selected_semantic_native_receiver_l0_heartbeat",
+        "failure_variant": "l0_cbor",
+        "feature_cache_built": false,
+        "final_experiment1_artifacts_persisted": false,
+        "full_development_bundle_verified": true,
+        "general_experiment1_routes_complete": 4,
+        "model_selection_computed_in_memory": true,
+        "model_selection_persisted": false,
+        "native_receiver_cache_built": false,
+        "native_receiver_cache_rows_persisted": 0,
+        "native_receiver_cache_started": true,
+        "protocol_frozen": false,
+        "raw_experiment1_artifact_count": 132,
+        "raw_experiment1_inference_row_count": 4152,
+        "raw_experiment1_shard_artifacts_complete": true,
+        "report_or_figures_generated": false,
+        "runtime_smoke_passed": true,
+        "schema_version": "semuav.visdrone-v2r9-operator-observed-validation-stop.v1",
+        "scientific_environment_sealed": true,
+        "semantic_packet_cache_computed_in_memory": true,
+        "temporal_experiment1_routes_complete": 2,
+        "trusted_code_cache_frozen": true,
+        "untouched_test_accessed": false,
+        "validation_experiments_1_2_entered": true,
+        "validation_input_gate_completed": true,
+        "validation_temporal_sample_created_or_verified": true,
+        "validation_vlm_inference_executed": true
+      },
+      "predecessor_release_id": "release_20260920_visdrone_paper_v2r9",
+      "predecessor_run_name": "semuav_visdrone_v2r9",
+      "schema_version": "semuav.visdrone-v2r9-operator-observed-terminal-boundary.v1",
+      "source_authenticated_defect": {
+        "affected_entrypoint": "RegisteredVisDroneNativeReceiver.__call__",
+        "affected_module": "semuav.visdrone_receiver_runtime",
+        "affected_path": "semuav.visdrone_receivers.build_native_receiver_cache -> wire_decode_and_receiver -> RegisteredVisDroneNativeReceiver",
+        "affected_variant": "l0_cbor",
+        "authoritative_pixel_control_fields": [
+          "capture_time_us",
+          "gps_lat",
+          "gps_lon",
+          "altitude_m",
+          "yaw_deg"
+        ],
+        "corrected_fusion_policy_version": "semuav.visdrone-native-fusion.v3",
+        "correction": "strictly_validate_canonical_actionless_l0_heartbeat_then_return_registered_NO_ACTION_and_bind_authoritative_control_time_and_flight_telemetry_into_pixel_receiver_requests",
+        "defect_kind": "actionless_l0_heartbeat_rejected_by_generic_semantic_action_path",
+        "exception_message_template": "Decoded semantic packet has unregistered action for {sample_id}",
+        "exception_type": "StudyGateError",
+        "latent_affected_entrypoint": "RegisteredVisDroneNativeReceiver._frame_action",
+        "latent_defect_kind": "pixel_receiver_request_used_synthetic_time_and_partial_telemetry",
+        "predecessor_fusion_policy_version": "semuav.visdrone-native-fusion.v2",
+        "registered_l0_receiver_action": "NO_ACTION",
+        "regression_coverage": [
+          "canonical_l0_heartbeat_returns_NO_ACTION",
+          "l0_with_action_field_rejected",
+          "actionless_l1_and_l2_rejected",
+          "unknown_semantic_variant_rejected",
+          "variant_specific_fusion_receipt_bound",
+          "pixel_receiver_request_binds_authoritative_time_and_telemetry",
+          "l3_roi_receiver_preserves_authoritative_telemetry",
+          "registered_native_cache_l0_through_visual_and_video_end_to_end"
+        ],
+        "requirements_changed": false,
+        "schema_version": "semuav.visdrone-v2r10-source-authenticated-native-receiver-correction.v1",
+        "scientific_contract_changed": false,
+        "source_evidence_level": "authenticated_v2r9_and_v2r10_native_receiver_source"
+      },
+      "v2r10_derived_results_recomputation_required": true,
+      "v2r10_downstream_results_recomputation_required": true,
+      "v2r10_fresh_runtime_smoke_required": true,
+      "v2r10_raw_experiment1_recovery_authorized": true,
+      "v2r10_raw_experiment1_recovery_schema": "semuav.visdrone-v2r9-exp1-recovery.v1",
+      "v2r9_derived_scientific_outputs_reused": false
+    },
+    "registered_configuration_sha256": "d67c4655cecaf49d1cef4b9daf502426dd6d33b0732c93eddfd9f5eb54f7b77f",
+    "remedies": [
+      "validate the exact canonical L0 heartbeat before returning registered NO_ACTION",
+      "retain strict transmitted-action validation for L1 and L2",
+      "bind authoritative capture time and flight telemetry into L3 and visual detector requests",
+      "retain strict L3 semantic/ROI fusion and current-frame visual receiver behavior",
+      "freeze and rehash exactly 132 raw v2r9 Experiment-1 shards totaling 4,152 rows",
+      "recompute all derived Experiment-1 products and every downstream result",
+      "keep the untouched test closed",
+      "require a fresh v2r10 three-model smoke and scientific environment seal"
+    ],
+    "scientific_contract_changed": false,
+    "scope": "prospective_v2r10_native_receiver_l0_contract_correction_l3_authoritative_telemetry_binding_and_outcome_blind_raw_experiment1_recovery",
+    "stage": "development_validation_experiments_1_2_first_native_l0_payload",
+    "untouched_test_data_read": false
+  },
+  "package_name": "SemUAV-VLM-VisDrone-Paper-Study",
+  "payload_file_count": 114,
+  "payload_inventory": [
+    {
+      "bytes": 240,
+      "path": ".gitignore",
+      "role": "release_support",
+      "sha256": "8f4c4bfe21f4913b0589306961bf6f0cd0bd06e6005631c38879894882da3714"
+    },
+    {
+      "bytes": 19997,
+      "path": "METHODOLOGY_AMENDMENT_20260908.md",
+      "role": "pre_validation_methodology_amendment",
+      "sha256": "cbb56f0406cd709d4639fe18365f3c0d69273c6c0273e6425e5b297ad97f7e02"
+    },
+    {
+      "bytes": 7611,
+      "path": "PRE_EXPERIMENT_TEMPORAL_FEASIBILITY_AMENDMENT_20260914_V2R7.md",
+      "role": "prospective_pre_experiment_temporal_feasibility_amendment",
+      "sha256": "d24652933f472a26d55e7c7272a3cd40e90af1d2a3d47c35dcf08b782ee51bd8"
+    },
+    {
+      "bytes": 5392,
+      "path": "PRE_SMOKE_CORRECTION_20260908.md",
+      "role": "pre_smoke_release_correction_record",
+      "sha256": "f30f970155fd4256f5cb6e8c3c7e89d7f2012397f38aa6301faa3d512e50d2bd"
+    },
+    {
+      "bytes": 3662,
+      "path": "PRE_SMOKE_NOTEBOOK_ACCEPTANCE_CORRECTION_20260912.md",
+      "role": "pre_smoke_notebook_acceptance_isolation_correction_record",
+      "sha256": "07346eea53406572ccdd5c370c85b39a3b477843a933bb2e566af72429d99c02"
+    },
+    {
+      "bytes": 2159,
+      "path": "PRE_SMOKE_PREDECESSOR_BOUNDARY_ROUTING_CORRECTION_20260921_V2R12.md",
+      "role": "pre_smoke_predecessor_boundary_routing_correction",
+      "sha256": "3c64891976ae097c5adc320ab7fc5653868320c3c4180c83ae4bf9370d80c2a8"
+    },
+    {
+      "bytes": 2749,
+      "path": "PRE_VALIDATION_ACCEPTANCE_RECOVERY_ISOLATION_20260921_V2R11.md",
+      "role": "prospective_pre_validation_acceptance_recovery_environment_isolation",
+      "sha256": "ff0f0329cbb06e2f754c243578bc80c538a208a2f7df72caf0264e6d6fc505ef"
+    },
+    {
+      "bytes": 3703,
+      "path": "PRE_VALIDATION_LOW_EVIDENCE_PACKET_CORRECTION_20260921_V2R13.md",
+      "role": "pre_validation_low_evidence_packet_correction",
+      "sha256": "ab9cf031a55a12caa6d6f91f0fc98b4d756389263c9a769cd9b9338138e6f63c"
+    },
+    {
+      "bytes": 9059,
+      "path": "PRE_VALIDATION_MODEL_SET_AMENDMENT_20260914_V2R6.md",
+      "role": "prospective_pre_validation_model_set_amendment",
+      "sha256": "6146e21908d00757dc15830c8232aff54c32953a3594bddc7dfcc739a876a1c2"
+    },
+    {
+      "bytes": 5450,
+      "path": "PRE_VALIDATION_NATIVE_RECEIVER_RECOVERY_20260921_V2R10.md",
+      "role": "prospective_pre_validation_native_receiver_correction_and_recovery",
+      "sha256": "84510ede90584161c6254e530b68977b070097837197d31e64b50a6925380bec"
+    },
+    {
+      "bytes": 14988,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260909.md",
+      "role": "pre_validation_runtime_correction_record",
+      "sha256": "ce22fd45c1f2534bf35c3218d24e29ff32a182a167ebaccd58cf3ce3452b6d31"
+    },
+    {
+      "bytes": 5896,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260912_V2R3.md",
+      "role": "historical_predecessor_runtime_acceptance_correction_record",
+      "sha256": "3d3e4c730029050688f75a53abd4c374ed6ff409fc090e598e2966ebbf1cf58e"
+    },
+    {
+      "bytes": 5594,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260912_V2R4.md",
+      "role": "prospective_pre_validation_runtime_acceptance_correction_record",
+      "sha256": "f61b0c6e273f083caec72ff2745a9a8388cb03081f9b27bf5193d1f90f388765"
+    },
+    {
+      "bytes": 8665,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260913_V2R5.md",
+      "role": "prospective_pre_validation_runtime_acceptance_correction_record",
+      "sha256": "10fc6ad3a2d4ae41855ae5fce25c66cb20f4e6393d81f0f099d7a3071e317aae"
+    },
+    {
+      "bytes": 6879,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260914_V2R8.md",
+      "role": "prospective_pre_validation_runtime_import_correction",
+      "sha256": "cfa6ae49e44915d4417530f0888f5a36c77b3f85bf752650714d5e323dcb9c36"
+    },
+    {
+      "bytes": 9215,
+      "path": "PRE_VALIDATION_RUNTIME_CORRECTION_20260920_V2R9.md",
+      "role": "prospective_pre_validation_runtime_metadata_correction",
+      "sha256": "b67bab5d9e7b98c425f3feb3d4a0aa0de7578584979825b7560b002b631262d5"
+    },
+    {
+      "bytes": 20789,
+      "path": "README.md",
+      "role": "release_readme",
+      "sha256": "c3a68e451c05dc64bf1f4f083187336469b4abc2bde4a8ec37ab7237b7219cfb"
+    },
+    {
+      "bytes": 142607,
+      "path": "SemUAV_VLM_Full_Study.ipynb",
+      "role": "legacy_notebook",
+      "sha256": "0c4364be3fc2f567655dc94b8c7744a48264ced564e28b27810358ecef83fae2"
+    },
+    {
+      "bytes": 421537,
+      "path": "SemUAV_VLM_VisDrone_Paper_Study.ipynb",
+      "role": "notebook_entrypoint",
+      "sha256": "8794bafeb425213ec4b454d9de714b9c239316c606ac83bdc1bfdc2d4126fa1b"
+    },
+    {
+      "bytes": 10492,
+      "path": "VALIDATION_REPORT.md",
+      "role": "release_validation_record",
+      "sha256": "8726e20a2138f489172f6057b947faf36d75a7edfc5d20bd18c5f748fafd2db1"
+    },
+    {
+      "bytes": 20556,
+      "path": "VISDRONE_PAPER_RUN_GUIDE.md",
+      "role": "operator_run_guide",
+      "sha256": "10070a0d172cdd72ac94a1463de7da8ef803192706cf3c7b5cc1d894cd4f14ab"
+    },
+    {
+      "bytes": 9858,
+      "path": "acceptance/visdrone_runtime_smoke_canary_v1.json",
+      "role": "development_runtime_smoke_canary",
+      "sha256": "ba22e0083657e7a5ad454e71586a0d31485a5216afbd2f8b73ce3aa599d1b88d"
+    },
+    {
+      "bytes": 6002,
+      "path": "annotations/ANNOTATION_GUIDE.md",
+      "role": "annotation_or_ontology_contract",
+      "sha256": "6d2d0fc03dc66f1297bf2103ebbfb2910436f17de78e1e39976dd635d3185ae6"
+    },
+    {
+      "bytes": 1300,
+      "path": "annotations/mission_ontology.yaml",
+      "role": "annotation_or_ontology_contract",
+      "sha256": "afee8f0f70021761345e19c9f1d02ee931dabb5c134346d083457d1492c0c07f"
+    },
+    {
+      "bytes": 143762,
+      "path": "build_full_notebook.py",
+      "role": "compatibility_test_fixture_not_study_entrypoint",
+      "sha256": "45236185431bc0794ee734578c0d393f19acf9cf63e9327e7cdb2eaa0f212aee"
+    },
+    {
+      "bytes": 456339,
+      "path": "build_visdrone_paper_notebook.py",
+      "role": "notebook_builder",
+      "sha256": "f52b866b424d5997b5a03b38386c5c258127489456de215d6b795f671dd4d07d"
+    },
+    {
+      "bytes": 4119,
+      "path": "configs/datasets.yaml",
+      "role": "registered_configuration",
+      "sha256": "94a8f02e0dc16d22e29f7533722a933d19b7d7e433e78b1f2fb5bfad904dcd42"
+    },
+    {
+      "bytes": 1196,
+      "path": "configs/dry_run.yaml",
+      "role": "registered_configuration",
+      "sha256": "98a348ab9b0b7a058cbd04fa12fc4ce63e15db777afa873fa9a5dc3ce9f91806"
+    },
+    {
+      "bytes": 6624,
+      "path": "configs/full.yaml",
+      "role": "registered_configuration",
+      "sha256": "37f82426cd151340a8471b3524d250646e8b613c9f82bd60707fd8e8a86c0cdc"
+    },
+    {
+      "bytes": 21540,
+      "path": "configs/visdrone_paper.yaml",
+      "role": "registered_configuration",
+      "sha256": "f238a74001e79da03e23c58fb3927afc79c5cee29407dca4189b691607412c9c"
+    },
+    {
+      "bytes": 1918,
+      "path": "prompts/mission_packet_v1.txt",
+      "role": "registered_prompt",
+      "sha256": "ad617b2b6f55ee264ea68c249ec1f426d22e1f775bf4591886800a0351c3752b"
+    },
+    {
+      "bytes": 1547,
+      "path": "prompts/visdrone_proposal_decision_v1.txt",
+      "role": "registered_prompt",
+      "sha256": "f6aa2991aaf253502c75b1b30a9412dfc8b65089347a4b2ac58f79b107b31010"
+    },
+    {
+      "bytes": 1825,
+      "path": "prompts/visdrone_proposal_decision_v2.txt",
+      "role": "registered_prompt",
+      "sha256": "2f38e4c11170100e09cdea42022e7bd8d9d3e72d7854c2fb9c4d233a7f85ca40"
+    },
+    {
+      "bytes": 797,
+      "path": "prompts/visdrone_proposal_decision_v3.txt",
+      "role": "registered_prompt",
+      "sha256": "d17c93072f1dc33d0ba507d074486f51937749976a39300feeaa4286352d670f"
+    },
+    {
+      "bytes": 2897,
+      "path": "prompts/visdrone_source_rule_v1.txt",
+      "role": "registered_prompt",
+      "sha256": "296d08befb5bd34e2c326d569fba63450f54d41f988914659431ebec2cbe1898"
+    },
+    {
+      "bytes": 1397,
+      "path": "requirements.txt",
+      "role": "python_dependency_specification",
+      "sha256": "028a2757d2e1565db90ff26a26fd6e564bd592c868ed093d632cb930d438dfa5"
+    },
+    {
+      "bytes": 319,
+      "path": "semuav/__init__.py",
+      "role": "study_source",
+      "sha256": "54f383f57984d83a582d6b844e843ff4e7da43550b3bf45bb95ff30b7bba8695"
+    },
+    {
+      "bytes": 59094,
+      "path": "semuav/acquisition.py",
+      "role": "study_source",
+      "sha256": "1968ca71ccc8737ccd9718abe2acc86880a05dbf3175615a2ae7af0d1c2f62a9"
+    },
+    {
+      "bytes": 46791,
+      "path": "semuav/config.py",
+      "role": "study_source",
+      "sha256": "096f62fb148d6ac629c5378bf3cc0e6205534d98f7e1f3796849367ba1d3ea6f"
+    },
+    {
+      "bytes": 25098,
+      "path": "semuav/control.py",
+      "role": "study_source",
+      "sha256": "eeb75f7cb59478c9be482bd53e56b87d33e5f6d83e80871825da21b029d304f5"
+    },
+    {
+      "bytes": 86147,
+      "path": "semuav/data.py",
+      "role": "study_source",
+      "sha256": "440c60896c39b63e9c413befcd212f7ade20dfce285deac796548670cc840554"
+    },
+    {
+      "bytes": 20090,
+      "path": "semuav/evaluation.py",
+      "role": "study_source",
+      "sha256": "1b898fb52cec45970c8f258fd64883cc850e23bbe4a0861a7355f328c816f1fc"
+    },
+    {
+      "bytes": 17149,
+      "path": "semuav/exp6_strategies.py",
+      "role": "study_source",
+      "sha256": "0dde99db51f016129c677d817499cf6f0d17b8a128a8d2e00bd99926c8330d6a"
+    },
+    {
+      "bytes": 302816,
+      "path": "semuav/experiments.py",
+      "role": "study_source",
+      "sha256": "76167c332c2390a95265c18a8575d01afa3ed1aa0b2e630d9e5aab7556410009"
+    },
+    {
+      "bytes": 73197,
+      "path": "semuav/figures.py",
+      "role": "study_source",
+      "sha256": "27bff045d4aba818b102993ea95a8facdf2c9643e8b50896e02018c6a6899304"
+    },
+    {
+      "bytes": 66503,
+      "path": "semuav/hardware.py",
+      "role": "study_source",
+      "sha256": "377ba6302df8fe8b29d63ef80a24ff14882d764c63ddeae955eee4c02ca74954"
+    },
+    {
+      "bytes": 61708,
+      "path": "semuav/network.py",
+      "role": "study_source",
+      "sha256": "de4dd8bd4363cc06ba6c094ccb657827821082d67ba34b2afaaea9e97280f349"
+    },
+    {
+      "bytes": 125885,
+      "path": "semuav/perception.py",
+      "role": "study_source",
+      "sha256": "420f3dbcd8a9a9b61feabd1b2f367ea728aba34710b8257f725e432d0ad5ef67"
+    },
+    {
+      "bytes": 72786,
+      "path": "semuav/policy_reducer.py",
+      "role": "study_source",
+      "sha256": "3c25b42f0e93221e02c3ddab597a9f496bb2ee6c52ae4589d471f198086a30b2"
+    },
+    {
+      "bytes": 48154,
+      "path": "semuav/protocol.py",
+      "role": "study_source",
+      "sha256": "4100cb1a8cbe146d4bbb6e0cd1a0a3183988e362380612eb10867272d25ed573"
+    },
+    {
+      "bytes": 44907,
+      "path": "semuav/registry.py",
+      "role": "study_source",
+      "sha256": "df726620200ace88993e294186e8e6b76817aa4b0f4f1f7aa7c61cf8c72cc405"
+    },
+    {
+      "bytes": 2961,
+      "path": "semuav/runtime.py",
+      "role": "study_source",
+      "sha256": "795a89e412076a72900e9f68c74dfa82f2679ef62476648f40c27b5d95d2c13d"
+    },
+    {
+      "bytes": 1345,
+      "path": "semuav/runtime_smoke_worker.py",
+      "role": "study_source",
+      "sha256": "f6933baa9e868983f0293c8665dc1c5c2ed6967f71041ee3f56880e753dca935"
+    },
+    {
+      "bytes": 18523,
+      "path": "semuav/visdrone_measurement.py",
+      "role": "study_source",
+      "sha256": "5f354fee6d2086f024ee5d6b55f24909ebebb5feb8c735a5d83a5e663bb578ce"
+    },
+    {
+      "bytes": 184643,
+      "path": "semuav/visdrone_models.py",
+      "role": "study_source",
+      "sha256": "d8a31bb1a4ec066a562d0c617cd6e36dc05cc47b58ebd031014345b794d96625"
+    },
+    {
+      "bytes": 39247,
+      "path": "semuav/visdrone_paper.py",
+      "role": "study_source",
+      "sha256": "2768d4365076617cab66e468fa38526396669c0a4d92f3cc9bb149b77ec06d20"
+    },
+    {
+      "bytes": 43767,
+      "path": "semuav/visdrone_receiver_runtime.py",
+      "role": "study_source",
+      "sha256": "a1d788d1e71c59ca8bf65aeb56a9018f91447eaca15317429dbb8109721843ca"
+    },
+    {
+      "bytes": 54525,
+      "path": "semuav/visdrone_receivers.py",
+      "role": "study_source",
+      "sha256": "00ba2d4adb7deec1a1cd38aa6e3089394115d2aa1e35632d52a64dccdd41b1fc"
+    },
+    {
+      "bytes": 13526,
+      "path": "semuav/visdrone_recovery.py",
+      "role": "study_source_outcome_blind_cache_recovery",
+      "sha256": "ea549258c9b8e39950fb79f5b18ebcf65befa5fcaccda9ca47979692a30db9e9"
+    },
+    {
+      "bytes": 286522,
+      "path": "semuav/visdrone_runner.py",
+      "role": "study_source",
+      "sha256": "ef9835ab15d2df1fa3731d7152d6f877ac0914d683b70e4f9988f8b98a849203"
+    },
+    {
+      "bytes": 182913,
+      "path": "semuav/visdrone_workflow.py",
+      "role": "study_source",
+      "sha256": "8a6f4b995a991a961cad05ad26e33b4ef041c1f5de22cf48a1ebdc3c33065b1a"
+    },
+    {
+      "bytes": 28246,
+      "path": "tests/test_acquisition.py",
+      "role": "software_acceptance_test",
+      "sha256": "9608372aed9b56e225afe8faf6c06a5543467b55fc24379daee3588a2567b686"
+    },
+    {
+      "bytes": 3706,
+      "path": "tests/test_annotation_geometry.py",
+      "role": "software_acceptance_test",
+      "sha256": "ae1af78210228b3c9d483111a69f1973b0b9d228174c80e921d5a8c2d92b7fec"
+    },
+    {
+      "bytes": 4546,
+      "path": "tests/test_annotation_ontology.py",
+      "role": "software_acceptance_test",
+      "sha256": "8f37dcfcb9eb0ddecc8690a732563d7c98b930703369ca275dc7f14f4452b7e0"
+    },
+    {
+      "bytes": 14666,
+      "path": "tests/test_controller_ablations.py",
+      "role": "software_acceptance_test",
+      "sha256": "26db9fcba61bdd5899f715cfd8be380b0d7b9e99a87ee39cc1b53f5ca920ec34"
+    },
+    {
+      "bytes": 44719,
+      "path": "tests/test_core.py",
+      "role": "software_acceptance_test",
+      "sha256": "98f38bacc4142e8191fa536ba59674915eba91fd6e11d1b4976ea00db7372245"
+    },
+    {
+      "bytes": 26596,
+      "path": "tests/test_data_workflow.py",
+      "role": "software_acceptance_test",
+      "sha256": "17424aabd70ea2f01770f782ff8f56f3eabc0090cb765e5cf60c5ebe5ec2aed5"
+    },
+    {
+      "bytes": 5061,
+      "path": "tests/test_detector_frozen_policy.py",
+      "role": "software_acceptance_test",
+      "sha256": "6c7fe510662018c9ed6e88f2fde8192ed59a3f1758e3a71fd4ddfd76d9a1ba27"
+    },
+    {
+      "bytes": 4417,
+      "path": "tests/test_dynamic_sharding.py",
+      "role": "software_acceptance_test",
+      "sha256": "8a6ce0b4954eddec9fd99f48aeb15c9fbe67a9db81dc519728f559d252b876c9"
+    },
+    {
+      "bytes": 8018,
+      "path": "tests/test_evaluation_vectorized.py",
+      "role": "software_acceptance_test",
+      "sha256": "01b35046daa5dc40fe329e6653b523e42870378deeede63060170c193ad45868"
+    },
+    {
+      "bytes": 18286,
+      "path": "tests/test_experiment1_metrics.py",
+      "role": "software_acceptance_test",
+      "sha256": "bf6287ecf049132d38e3f54c7bd49bb9dc1741ede5aa5ca0b2cd34cd40a81a8c"
+    },
+    {
+      "bytes": 17271,
+      "path": "tests/test_experiment3_partitioned.py",
+      "role": "software_acceptance_test",
+      "sha256": "cc239bf803b1a07d74cd889bb34497eff8f2f5ac4afa07d3b582386322317667"
+    },
+    {
+      "bytes": 2525,
+      "path": "tests/test_experiment3_variant_selection.py",
+      "role": "software_acceptance_test",
+      "sha256": "71effb11e956ab6ddaeb5f04f58c591061ad110f1688a7b443946638ae67cc8b"
+    },
+    {
+      "bytes": 7761,
+      "path": "tests/test_experiment4_controller.py",
+      "role": "software_acceptance_test",
+      "sha256": "a2230ed5b8ac1ae9fcc4f6f28fa7c1eb9be9e6423986025f38c1528809f18b3b"
+    },
+    {
+      "bytes": 4511,
+      "path": "tests/test_experiment5.py",
+      "role": "software_acceptance_test",
+      "sha256": "e49548e16c7d04c36c9047e45f62bae5f3d80083e5c134829cb85911139be9e2"
+    },
+    {
+      "bytes": 5989,
+      "path": "tests/test_experiment6.py",
+      "role": "software_acceptance_test",
+      "sha256": "ee7543a7cdc3abc2ceae06723ecad7cb54d66672adda40db96dd0ecb1fba1c09"
+    },
+    {
+      "bytes": 24092,
+      "path": "tests/test_figures.py",
+      "role": "software_acceptance_test",
+      "sha256": "4454056627974cb0615fac3e8ca066c09848984f4b008ff5e4d62711aaa1b48c"
+    },
+    {
+      "bytes": 19786,
+      "path": "tests/test_hardware.py",
+      "role": "software_acceptance_test",
+      "sha256": "5d930c0a6d838b9f5e06623c886247fe1be2b77ed22d022143ff9718ff029cc2"
+    },
+    {
+      "bytes": 6487,
+      "path": "tests/test_network.py",
+      "role": "software_acceptance_test",
+      "sha256": "4668f06e49089034522ff4a164a72a3da496aeed1cb0d9e44114c5af06b5ff7b"
+    },
+    {
+      "bytes": 20715,
+      "path": "tests/test_notebook_builder.py",
+      "role": "software_acceptance_test",
+      "sha256": "d8d8d1fdc453645ef44b9edb00ed5c9b9036b61934f4ae69f189773ed8e087f6"
+    },
+    {
+      "bytes": 12194,
+      "path": "tests/test_perception_scheduling.py",
+      "role": "software_acceptance_test",
+      "sha256": "dfe964e635d13b0f7a9138a59122e0e5719a5c9191280b9c535417ce062ea35a"
+    },
+    {
+      "bytes": 24202,
+      "path": "tests/test_policy_reducer.py",
+      "role": "software_acceptance_test",
+      "sha256": "b6c8b099cb7d0266a1fc8d4d0bb1f880d6e42a7644b6b97b2110987d24cbdd49"
+    },
+    {
+      "bytes": 18481,
+      "path": "tests/test_registry.py",
+      "role": "software_acceptance_test",
+      "sha256": "4e0db6132ecde57116a843777261a9054581e8682f8a3a108badf7a46ef6443e"
+    },
+    {
+      "bytes": 6093,
+      "path": "tests/test_runtime.py",
+      "role": "software_acceptance_test",
+      "sha256": "09e708c59a6d72ed11ccb38bad9d8cfea831dffe974dca25fa4d65e2ccbff324"
+    },
+    {
+      "bytes": 3289,
+      "path": "tests/test_runtime_energy.py",
+      "role": "software_acceptance_test",
+      "sha256": "7c645915acc4c5b6d519b08ca611d24ff9d1762a6d8673a4e29325df08f732d0"
+    },
+    {
+      "bytes": 4041,
+      "path": "tests/test_statistics.py",
+      "role": "software_acceptance_test",
+      "sha256": "01365573b7c70aba6c92771ebd0b69ca937bf10ccc2d607c3c736270c011465c"
+    },
+    {
+      "bytes": 20103,
+      "path": "tests/test_strict_model_output.py",
+      "role": "software_acceptance_test",
+      "sha256": "547ee8cbfbfa644b895e61d2a12c4d99ea0061117c7cd8829cd5e301f6c639c1"
+    },
+    {
+      "bytes": 20444,
+      "path": "tests/test_transport_provenance.py",
+      "role": "software_acceptance_test",
+      "sha256": "a8f001ffcafc65fb1e9ce45fdc37707cc12f12008c3f66d86954d18c01aa116a"
+    },
+    {
+      "bytes": 15352,
+      "path": "tests/test_visdrone_config.py",
+      "role": "software_acceptance_test",
+      "sha256": "ff13c1e8b09a26f9656f15bc6a784be47208dd94464a5649ea1e418c2486d1a3"
+    },
+    {
+      "bytes": 18294,
+      "path": "tests/test_visdrone_measurement.py",
+      "role": "software_acceptance_test",
+      "sha256": "dcb3e10b8afffe80d109d4aa6f0b5890c9dcc7066ac5087ee1ff1ac6307646e0"
+    },
+    {
+      "bytes": 47159,
+      "path": "tests/test_visdrone_models.py",
+      "role": "software_acceptance_test",
+      "sha256": "4fe76b07c2be820684ebc41f39f0a0fd55012277850deb9b9cff0bd449c2330e"
+    },
+    {
+      "bytes": 139839,
+      "path": "tests/test_visdrone_notebook_builder.py",
+      "role": "software_acceptance_test",
+      "sha256": "974400ee66d8230534adf1e876d8438c7d27ae5cfcb54c3bf6bb5c0bbbaecb92"
+    },
+    {
+      "bytes": 15215,
+      "path": "tests/test_visdrone_paper.py",
+      "role": "software_acceptance_test",
+      "sha256": "8312fd7898023601f958f5e496334253e38f606049d45aa9a09900c6b51a0ffd"
+    },
+    {
+      "bytes": 13281,
+      "path": "tests/test_visdrone_proposal_backends.py",
+      "role": "software_acceptance_test",
+      "sha256": "7e69c81a640fd5f090bca789ef103e835b40cb80b0018bedf7d250d48e4bc940"
+    },
+    {
+      "bytes": 28057,
+      "path": "tests/test_visdrone_receiver_runtime.py",
+      "role": "software_acceptance_test",
+      "sha256": "104db3b7f4eef59ab5fc6cdf0db8dd6cbe7b6d96860f77a69b7aec7a77716b85"
+    },
+    {
+      "bytes": 25214,
+      "path": "tests/test_visdrone_receivers.py",
+      "role": "software_acceptance_test",
+      "sha256": "606c777156629a47a4b2bf9a6624c40709f9897b6db42a7756dad9b0904db687"
+    },
+    {
+      "bytes": 42242,
+      "path": "tests/test_visdrone_runner_contract.py",
+      "role": "software_acceptance_test",
+      "sha256": "aa6849669336d2731369424d75df37f1eec81ec68124bae146ff837183d49173"
+    },
+    {
+      "bytes": 17996,
+      "path": "tests/test_visdrone_temporal_sampling.py",
+      "role": "software_acceptance_test",
+      "sha256": "f3bd308e326daa9d1a2496947a53fe1ddb924f413a9ccde2371443e85b954c27"
+    },
+    {
+      "bytes": 54387,
+      "path": "tests/test_visdrone_v2r12_boundary_routing.py",
+      "role": "software_acceptance_test",
+      "sha256": "c61dacc454993bddc2db014be8decaa05229334c15f68ca3d9ad889d0396dbf0"
+    },
+    {
+      "bytes": 3100,
+      "path": "tests/test_visdrone_v2r13_boundary_routing.py",
+      "role": "software_acceptance_test",
+      "sha256": "22fabc2121ab926dfb7da412ea07e474117c33b99ec8bfe25014641853564076"
+    },
+    {
+      "bytes": 13298,
+      "path": "tests/test_visdrone_v2r13_low_evidence.py",
+      "role": "software_acceptance_test",
+      "sha256": "91a4e32c85533cc99c024622bc0c99b5de500e85139f401dbbd399ca02f68cd3"
+    },
+    {
+      "bytes": 13395,
+      "path": "tests/test_visdrone_v2r2_contract_guards.py",
+      "role": "software_acceptance_test",
+      "sha256": "3ec7d8f91f2f5349f052ffee5e8555bd1cdb6e8b8e14fae79634647cc41a9a39"
+    },
+    {
+      "bytes": 18326,
+      "path": "tests/test_visdrone_v2r2_moondream_route.py",
+      "role": "software_acceptance_test",
+      "sha256": "43a507b18c5d3ffce50511051d2ce54fbf65c21ea41d44f6464547aec946784a"
+    },
+    {
+      "bytes": 14568,
+      "path": "tests/test_visdrone_v2r2_qwen_serialization.py",
+      "role": "software_acceptance_test",
+      "sha256": "0632a37d94b506b725480046e84d149927de107b9e1e67dc65965608bc3c2a61"
+    },
+    {
+      "bytes": 9843,
+      "path": "tests/test_visdrone_v2r2_smoke_json_counts.py",
+      "role": "software_acceptance_test",
+      "sha256": "683ebb3d6e2e0fa8654d88671b94df6419a0b65bca795c7f918ad1d6194d8661"
+    },
+    {
+      "bytes": 6012,
+      "path": "tests/test_visdrone_v2r5_compact_contract.py",
+      "role": "software_acceptance_test",
+      "sha256": "bbeaa99c8e7233512b206ab288c90504ff95b0fbc06e1825da13b2d822bc4159"
+    },
+    {
+      "bytes": 16840,
+      "path": "tests/test_visdrone_v2r5_moondream_tokenizer_lock.py",
+      "role": "software_acceptance_test",
+      "sha256": "64b054407635799d426bc492c35d2897731fd431b23417294431a2f3b7ff86c9"
+    },
+    {
+      "bytes": 14481,
+      "path": "tests/test_visdrone_v2r5_subprocess_smoke.py",
+      "role": "software_acceptance_test",
+      "sha256": "8dfcc83c0ce0dfdcfd52a947b4ede18104ace02eb59fb581c13c0911cb15a817"
+    },
+    {
+      "bytes": 7162,
+      "path": "tests/test_visdrone_v2r6_model_lock_derivation.py",
+      "role": "software_acceptance_test",
+      "sha256": "4648d877012a886fd5a5380f87f75fee3c68949c4777f7031f8683fa421bd1e9"
+    },
+    {
+      "bytes": 4801,
+      "path": "tests/test_visdrone_v2r6_model_set_amendment.py",
+      "role": "software_acceptance_test",
+      "sha256": "ad5fd3bbaf419c2b99a12a8bcbb4219d8ab3dce0448a70b89abbabd173becb25"
+    },
+    {
+      "bytes": 16915,
+      "path": "tests/test_visdrone_v2r6_runner_model_binding.py",
+      "role": "software_acceptance_test",
+      "sha256": "58daca393ecde8f0e6b0cba53257583ed41df7bfc6171e511df42263a319e467"
+    },
+    {
+      "bytes": 8990,
+      "path": "tests/test_visdrone_v2r6_trusted_code_cache.py",
+      "role": "software_acceptance_test",
+      "sha256": "7433b041d28ea19db263c453c4e53cc2cff708939395175875ae4814d9eccc9f"
+    },
+    {
+      "bytes": 13523,
+      "path": "tests/test_visdrone_v2r9_recovery.py",
+      "role": "software_acceptance_test",
+      "sha256": "d6ba5ab871d3ad66a08f897d49c5157921f973e958155780ec7ecda736bd6fd2"
+    },
+    {
+      "bytes": 60605,
+      "path": "tests/test_visdrone_workflow.py",
+      "role": "software_acceptance_test",
+      "sha256": "d7008d159fd48e3415433351cb9c5655e6986322bd145ed3b87989ff20eac216"
+    }
+  ],
+  "payload_total_uncompressed_bytes": 4282117,
+  "pre_experiment_temporal_feasibility_amendment": "PRE_EXPERIMENT_TEMPORAL_FEASIBILITY_AMENDMENT_20260914_V2R7.md",
+  "pre_smoke_correction": "PRE_SMOKE_CORRECTION_20260908.md",
+  "pre_smoke_notebook_acceptance_isolation_correction": "PRE_SMOKE_NOTEBOOK_ACCEPTANCE_CORRECTION_20260912.md",
+  "pre_smoke_predecessor_boundary_routing_correction": "PRE_SMOKE_PREDECESSOR_BOUNDARY_ROUTING_CORRECTION_20260921_V2R12.md",
+  "pre_validation_acceptance_recovery_isolation": "PRE_VALIDATION_ACCEPTANCE_RECOVERY_ISOLATION_20260921_V2R11.md",
+  "pre_validation_low_evidence_packet_correction": "PRE_VALIDATION_LOW_EVIDENCE_PACKET_CORRECTION_20260921_V2R13.md",
+  "pre_validation_model_set_amendment": "PRE_VALIDATION_MODEL_SET_AMENDMENT_20260914_V2R6.md",
+  "pre_validation_native_receiver_correction": "PRE_VALIDATION_NATIVE_RECEIVER_RECOVERY_20260921_V2R10.md",
+  "pre_validation_runtime_correction": "PRE_VALIDATION_RUNTIME_CORRECTION_20260909.md",
+  "pre_validation_runtime_import_correction": "PRE_VALIDATION_RUNTIME_CORRECTION_20260914_V2R8.md",
+  "pre_validation_runtime_metadata_correction": "PRE_VALIDATION_RUNTIME_CORRECTION_20260920_V2R9.md",
+  "predecessor_observed_terminal_boundary": {
+    "correction_record": "PRE_VALIDATION_LOW_EVIDENCE_PACKET_CORRECTION_20260921_V2R13.md",
+    "correction_record_sha256": "ab9cf031a55a12caa6d6f91f0fc98b4d756389263c9a769cd9b9338138e6f63c",
+    "evidence_model": "authenticated_source_runtime_seal_and_operator_observed_validation_stop",
+    "inherited_v2r10_terminal_boundary_preserved": true,
+    "inherited_v2r11_terminal_boundary_preserved": true,
+    "inherited_v2r9_terminal_boundary_preserved": true,
+    "operator_observed_execution": {
+      "deployment_receipt_sha256": "889850427153f9559fc038e2f10df174874dd59e8bff0473f61dcce1b62d2463",
+      "experiment2_frontier_completed_in_observed_invocation": false,
+      "failure_call_path": [
+        "run_validation_perception_and_frontier",
+        "_resolve_native_cache",
+        "build_native_receiver_cache",
+        "nvml_measurement_runner",
+        "RegisteredVisDroneNativeReceiver.__call__",
+        "RegisteredVisDroneNativeReceiver._frame_action",
+        "DetectorOnlyBackend.infer",
+        "validate_semantic_content_packet",
+        "validate_semantic_packet"
+      ],
+      "failure_exception_type": "ValueError",
+      "failure_kind": "positive_event_with_insufficient_evidence_rejected_by_frozen_semantic_schema",
+      "failure_message": "Insufficient evidence requires event=insufficient_evidence and recommended_action=REVIEW",
+      "failure_stage": "validation_native_receiver_cache_visual_payload_warmup",
+      "later_scientific_artifacts_must_be_absent_at_deployment": true,
+      "later_validation_completion_observed": false,
+      "native_receiver_cache_build_returned": false,
+      "protocol_freeze_observed": false,
+      "report_or_figures_completion_observed": false,
+      "runtime_smoke_three_of_three_passed": true,
+      "scientific_environment_sealed": true,
+      "source_deployment_ready": true,
+      "trusted_code_cache_frozen": true,
+      "untouched_test_access_observed": false,
+      "v2r9_experiment1_recovery_artifact_count": 132,
+      "v2r9_experiment1_recovery_receipt_preserved": true,
+      "v2r9_experiment1_recovery_row_count": 4152,
+      "validation_experiments_1_2_entered": true,
+      "validation_experiments_1_2_returned": false
+    },
+    "predecessor_release_id": "release_20260921_visdrone_paper_v2r12",
+    "predecessor_run_name": "semuav_visdrone_v2r12",
+    "schema_version": "semuav.visdrone-v2r12-operator-observed-terminal-boundary.v1",
+    "source_authenticated_defect": {
+      "affected_entrypoint": "semuav.perception.DetectorOnlyBackend.infer",
+      "correction": "normalize_event_to_insufficient_evidence_before_existing_action_mapping_when_evidence_is_false",
+      "defect_kind": "positive_event_survives_sufficient_evidence_false",
+      "mission_ontology_changed": false,
+      "predecessor_source_or_receipts_mutated": false,
+      "previously_schema_valid_predictions_changed": false,
+      "registered_dataset_or_split_changed": false,
+      "registered_models_changed": false,
+      "requirements_changed": false,
+      "schema_version": "semuav.visdrone-v2r13-low-evidence-packet-correction.v1",
+      "scientific_contract_changed": false,
+      "semantic_schema_changed": false,
+      "thresholds_changed": false
+    },
+    "v2r12_derived_scientific_outputs_reused": false,
+    "v2r13_derived_results_recomputation_required": true,
+    "v2r13_downstream_results_recomputation_required": true,
+    "v2r13_fresh_runtime_smoke_required": true,
+    "v2r13_raw_experiment1_recovery_authorized": true,
+    "v2r13_raw_experiment1_recovery_schema": "semuav.visdrone-v2r9-exp1-recovery.v1"
+  },
+  "predecessor_payload_continuity": {
+    "added_payloads": [
+      "PRE_VALIDATION_LOW_EVIDENCE_PACKET_CORRECTION_20260921_V2R13.md",
+      "tests/test_visdrone_v2r13_boundary_routing.py",
+      "tests/test_visdrone_v2r13_low_evidence.py"
+    ],
+    "changed_payloads": [
+      "README.md",
+      "SemUAV_VLM_VisDrone_Paper_Study.ipynb",
+      "VALIDATION_REPORT.md",
+      "VISDRONE_PAPER_RUN_GUIDE.md",
+      "build_visdrone_paper_notebook.py",
+      "configs/visdrone_paper.yaml",
+      "semuav/perception.py",
+      "semuav/visdrone_models.py",
+      "semuav/visdrone_recovery.py",
+      "semuav/visdrone_runner.py",
+      "tests/test_visdrone_config.py",
+      "tests/test_visdrone_notebook_builder.py",
+      "tests/test_visdrone_v2r12_boundary_routing.py",
+      "tests/test_visdrone_v2r2_moondream_route.py",
+      "tests/test_visdrone_v2r5_subprocess_smoke.py",
+      "tests/test_visdrone_v2r6_model_set_amendment.py",
+      "tests/test_visdrone_v2r9_recovery.py"
+    ],
+    "predecessor_checksum_inventory_sha256": "8fd90b8ba5f32bc0da435119db9bff09fd7c908b6388887e67cfa430b8266285",
+    "predecessor_manifest_sha256": "69bfb381877a419c698ba381f2af637208462ae764dd2f1b8abbb9c8c92729d5",
+    "predecessor_payload_file_count": 111,
+    "predecessor_release_id": "release_20260921_visdrone_paper_v2r12",
+    "removed_payloads": [],
+    "unchanged_payload_count": 94
+  },
+  "prospective_pre_validation_runtime_correction": "PRE_VALIDATION_RUNTIME_CORRECTION_20260913_V2R5.md",
+  "release_id": "release_20260921_visdrone_paper_v2r13",
+  "release_revision": {
+    "correction_record": "PRE_VALIDATION_LOW_EVIDENCE_PACKET_CORRECTION_20260921_V2R13.md",
+    "correction_record_sha256": "ab9cf031a55a12caa6d6f91f0fc98b4d756389263c9a769cd9b9338138e6f63c",
+    "derived_results_recomputation_required": true,
+    "downstream_results_recomputation_required": true,
+    "fresh_v2r13_runtime_smoke_required": true,
+    "predecessor_failure_type": "positive_event_with_insufficient_evidence_rejected_by_frozen_semantic_schema",
+    "predecessor_inference_environment_sealed": true,
+    "predecessor_protocol_frozen": false,
+    "predecessor_raw_experiment1_artifact_count": 132,
+    "predecessor_raw_experiment1_inference_rows": 4152,
+    "predecessor_runtime_smoke_entered": true,
+    "predecessor_untouched_test_data_read": false,
+    "predecessor_validation_experiments_started": true,
+    "raw_experiment1_recovery_authorized": true,
+    "requirements_changed": false,
+    "revision": "v2r13",
+    "scientific_contract_changed": false,
+    "scope": "low_evidence_detector_packet_schema_invariant_correction_only",
+    "supersedes_release_id": "release_20260921_visdrone_paper_v2r12",
+    "untouched_test_data_read": false
+  },
+  "reused_immutable_artifacts": {
+    "active_model_lock": "derived_during_prepare_and_bound_by_MODEL_LOCK_DERIVATION.json",
+    "detector_checkpoint_sha256": "a66356321ca834056f7945ecba2c121a6021999796beb0969e2e34232d79902a",
+    "detector_training_receipt_sha256": "e2f0349115b4749faaeb0b04a8b7eee3e1d01a94649743ef6d127966c8795fe7",
+    "feature_head_lock_sha256": "83b99ec9435825443c2e111bc01908332f11828742d093926ecf86b2588d3068",
+    "historical_source_model_lock_sha256": "aa7b6cc93c7783714ca5b1f1f80a776567078771db4d73ad92de941bde0c3de8"
+  },
+  "run_name": "semuav_visdrone_v2r13",
+  "runtime_smoke_canary": "acceptance/visdrone_runtime_smoke_canary_v1.json",
+  "schema_version": "semuav.visdrone-paper-release.v1",
+  "source_compatibility": {
+    "acceptance_recovery_isolation_record": "PRE_VALIDATION_ACCEPTANCE_RECOVERY_ISOLATION_20260921_V2R11.md",
+    "active_model_ids": [
+      "qwen3_vl_2b",
+      "smolvlm2_2b",
+      "qwen3_vl_8b_upper_bound"
+    ],
+    "active_model_set_sha256": "6f83118bb62cd68c98e9ee2afd947022c04088b9329a0eeef832eba17c2fb08c",
+    "active_source_release_id": "release_20260921_visdrone_paper_v2r13",
+    "candidate_requirements_changed": false,
+    "candidate_source_release_id": "release_20260912_visdrone_paper_v2r3",
+    "excluded_model_ids": [
+      "moondream2"
+    ],
+    "fresh_runtime_smoke_required": true,
+    "generation_policy_sha256": "1f73c410bf46c1012a66c204a574db47ff918b1c75f091db42196ef47ff69407",
+    "generation_policy_version": "semuav.visdrone-generation-policy.v5",
+    "low_evidence_packet_correction_record": "PRE_VALIDATION_LOW_EVIDENCE_PACKET_CORRECTION_20260921_V2R13.md",
+    "measurement_schema_version": "semuav.repeated-inference-measurement.v2",
+    "model_decision_contract": "semuav.visdrone-proposal-decision.v2",
+    "model_max_new_tokens": 256,
+    "native_receiver_correction_record": "PRE_VALIDATION_NATIVE_RECEIVER_RECOVERY_20260921_V2R10.md",
+    "predecessor_boundary_routing_correction_record": "PRE_SMOKE_PREDECESSOR_BOUNDARY_ROUTING_CORRECTION_20260921_V2R12.md",
+    "predecessor_smoke_rows_reused": false,
+    "requirements_byte_identical": true,
+    "runner_version": "semuav.visdrone-paper-runner.v7",
+    "runtime_smoke_input_schema": "semuav.model-runtime-smoke-input.v3",
+    "runtime_smoke_isolation_schema": "semuav.runtime-smoke-subprocess.v2",
+    "runtime_smoke_report_schema_version": 4,
+    "runtime_smoke_worker_input_schema": "semuav.runtime-smoke-worker-input.v2",
+    "runtime_smoke_worker_result_schema": "semuav.runtime-smoke-worker-result.v2",
+    "scientific_contract_changed": false,
+    "temporal_feasibility_amendment_record": "PRE_EXPERIMENT_TEMPORAL_FEASIBILITY_AMENDMENT_20260914_V2R7.md",
+    "temporal_observations_per_sequence": 64,
+    "temporal_source_frame_stride": 1,
+    "temporal_target_rate_hz": 5,
+    "temporal_test_sequences": 15,
+    "temporal_validation_sequences": 7,
+    "trusted_code_cache_receipt_schema": "semuav.visdrone-trusted-code-cache.v2"
+  },
+  "study_entrypoint": "SemUAV_VLM_VisDrone_Paper_Study.ipynb",
+  "temporal_feasibility_amendment": {
+    "amended_validation_fully_paired_scene_trace_cells": 84,
+    "amended_validation_sequences": 7,
+    "cache_build_started": false,
+    "experiments_1_to_7_started": false,
+    "fresh_runtime_smoke_required": true,
+    "observations_per_sequence": 64,
+    "predecessor_observed_eligible_validation_sequences": 7,
+    "predecessor_registered_validation_sequences": 15,
+    "predecessor_release": "release_20260914_visdrone_paper_v2r6",
+    "predecessor_run_name": "semuav_visdrone_v2r6",
+    "predecessor_smoke_rows_reused": false,
+    "protocol_frozen": false,
+    "record": "PRE_EXPERIMENT_TEMPORAL_FEASIBILITY_AMENDMENT_20260914_V2R7.md",
+    "record_sha256": "d24652933f472a26d55e7c7272a3cd40e90af1d2a3d47c35dcf08b782ee51bd8",
+    "retained_test_sequences": 15,
+    "schema": "semuav.visdrone-temporal-feasibility-amendment.v1",
+    "scientific_contract_changed": true,
+    "temporal_artifact_written": false,
+    "untouched_test_accessed": false,
+    "validation_development_bytes_read": true,
+    "validation_outcomes_evaluated": false,
+    "validation_trace_realizations": 12
+  },
+  "validation": {
+    "acceptance_recovery_environment_isolation": "PASS_INHERITED",
+    "builder_sha256": "f52b866b424d5997b5a03b38386c5c258127489456de215d6b795f671dd4d07d",
+    "experiment1_recovery_source_contract": "PASS",
+    "inherited_native_receiver_source_correction": "PASS",
+    "low_evidence_packet_correction": "PASS",
+    "notebook_cells": 41,
+    "notebook_code_cells": 21,
+    "notebook_exact_builder_output": true,
+    "notebook_execution_counts": 0,
+    "notebook_markdown_cells": 20,
+    "notebook_outputs": 0,
+    "notebook_sha256": "8794bafeb425213ec4b454d9de714b9c239316c606ac83bdc1bfdc2d4126fa1b",
+    "predecessor_boundary_routing_correction": "PASS_INHERITED",
+    "predecessor_v2r12_authenticated": "PASS",
+    "python_3_10_grammar": "PASS",
+    "real_gpu_runtime_smoke": "PENDING_REMOTE_EXECUTION",
+    "scientific_experiments": "NOT_RUN",
+    "unit_subtests": {
+      "failed": 0,
+      "passed": 387,
+      "run": 387
+    },
+    "unit_tests": {
+      "failed": 0,
+      "passed": 526,
+      "run": 526
+    }
+  }
+}

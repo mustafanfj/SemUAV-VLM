@@ -1,0 +1,482 @@
+schema_version: 1
+study_id: semuav_vlm_visdrone_paper_v2r13
+profile: full
+study_scope: visdrone_primary
+truth_mode: publisher_source_rule
+seed: 20260823
+seeds: [20260823, 20260829, 20260907, 20260919, 20261001]
+allow_synthetic: false
+
+# This configuration is a narrow, confirmatory VisDrone study. It does not
+# authorize wildfire, cross-dataset OOD, emergency-response, or embedded claims.
+paths:
+  project_root: ..
+  data_root: "${SEMUAV_DATA_ROOT:-data}"
+  output_root: "${SEMUAV_OUTPUT_ROOT:-outputs/visdrone_paper}"
+  cache_root: "${SEMUAV_CACHE_ROOT:-.cache/visdrone_paper_v2r13}"
+  annotations: "${SEMUAV_ANNOTATIONS:-annotations/visdrone_construct_validity_audit.csv}"
+  test_annotations: "${SEMUAV_TEST_ANNOTATIONS:-annotations/visdrone_test_construct_validity_audit.csv}"
+  split_manifest: "${SEMUAV_SPLIT_MANIFEST:-outputs/visdrone_paper/frozen_publisher_splits.csv.gz}"
+  channel_traces: "${SEMUAV_CHANNEL_TRACES:-traces/visdrone_paper_trace_manifest.csv}"
+  telemetry_manifest: "${SEMUAV_TELEMETRY_MANIFEST:-telemetry/visdrone_registered_missions.csv}"
+
+datasets:
+  visdrone:
+    adapter: visdrone
+    root: VisDrone
+    mission: visdrone_urban
+    enabled: true
+    required: true
+    synthetic: false
+    options:
+      publisher_train_components: [det_train, mot_train]
+      publisher_validation_components: [det_val, mot_val]
+      publisher_test_components: [det_test_dev, mot_test_dev]
+      exclude_category_ids: [0, 11]
+
+split:
+  seed: 20260823
+  # Publisher partitions override these generic ratios. The training component
+  # alone is divided by sequence into model-training and calibration material.
+  ratios: {train: 0.80, calibration: 0.20, validation: 0.0, test: 0.0}
+  leakage_keys: [split_group, flight_id, sequence_id]
+  strata: [component, mission_profile]
+  require_frozen_manifest: true
+  min_test_units: 30
+  min_critical_test_events: 140
+
+annotations:
+  # The primary endpoint is deterministically derived from publisher boxes and
+  # the frozen rule below. Human annotations are used only for the optional
+  # construct-validity audit and never overwrite publisher-source truth.
+  enabled: true
+  sample_column: sample_id
+  task_column: task
+  label_column: label
+  annotator_column: annotator_id
+  blinded_column: blinded
+  adjudicated_label_column: adjudicated_label
+  adjudicator_column: adjudicator_id
+  critical_column: is_critical
+  required_annotators: 2
+  require_blinding: true
+  require_manifest_coverage: false
+  require_adjudication_on_disagreement: true
+  min_observed_agreement: 0.80
+  min_chance_corrected_agreement: 0.80
+  min_rare_chance_corrected_agreement: 0.70
+  min_evidence_geometry_iou: 0.70
+
+benchmark:
+  action_rule_version: visdrone_source_rule_v1
+  # These source-label rules are part of the frozen estimand.  They are
+  # repeated here rather than inherited from implementation defaults so a
+  # configuration hash completely identifies the publisher-box endpoint.
+  occupancy_rule: center
+  min_roi_visible_fraction: 0.25
+  min_source_score: 0.50
+  publisher_partition_policy:
+    train: [det_train, mot_train]
+    validation: [det_val, mot_val]
+    test: [det_test_dev, mot_test_dev]
+  registered_roi_xyxy: [0.25, 0.25, 0.75, 0.85]
+  min_image_plane_iou: 0.05
+  visibility_rule:
+    visible_max_occlusion: 1
+    visible_max_truncation: 1
+    review_occlusion: [2]
+    review_truncation: [2]
+  mission_profiles:
+    vulnerable_road_user:
+      priority_categories: [pedestrian, people, bicycle, motor, tricycle, awning_tricycle]
+      deadline_ms: 700
+    heavy_vehicle:
+      priority_categories: [truck, bus]
+      deadline_ms: 1200
+    general_mobility:
+      priority_categories: [pedestrian, people, bicycle, car, van, truck, tricycle, awning_tricycle, bus, motor]
+      deadline_ms: 2000
+  endpoint_definition: correct_ground_notification_before_registered_deadline
+  respond_definition: immediate_ground_station_notification
+  prohibited_claims: [accident_detection, emergency_dispatch, physical_proximity, road_obstruction, wildfire, cross_dataset_ood]
+  construct_validity_audit_groups: 100
+  # Outcome-blind bounded inference samples. Group ranking reads only
+  # split/component/split-unit identity; every selected source retains all
+  # three mission-profile pairs. Test selection occurs only after the OPEN
+  # one-time ledger and must satisfy the registered independent-unit gates.
+  analysis_sampling:
+    method: outcome_blind_group_hash_temporal_v1
+    max_groups_per_component:
+      train: 30
+      calibration: 30
+      validation: 15
+      test: 15
+    max_frames_per_group:
+      train: 2
+      calibration: 2
+      validation: 2
+      test: 2
+  temporal_sampling:
+    schema: semuav.visdrone-temporal-controller.v1
+    method: outcome_blind_mot_sequence_hash_contiguous_v1
+    # Inherited v2r7 outcome-blind feasibility amendment: the v2r6 terminal input-gate
+    # observation reported seven eligible 64-frame MOT-validation sequences;
+    # v2r13 must freshly recompute and verify that exact capacity before writing.
+    # The untouched-test design remains unchanged.
+    validation_sequences: 7
+    test_sequences: 15
+    sequences_per_split:
+      validation: 7
+      test: 15
+    observations_per_sequence: 64
+    # VisDrone publisher sequence frame-rate metadata is not assumed. Select
+    # consecutive publisher frames, then replay the registered sample at 5 Hz.
+    source_frame_stride: 1
+    target_rate_hz: 5
+    minimum_temporal_groups: 30
+    minimum_group_trace_cells: 500
+    component_by_split:
+      validation: mot_val
+      test: mot_test_dev
+  temporal_feasibility_amendment:
+    schema: semuav.visdrone-temporal-feasibility-amendment.v1
+    record: PRE_EXPERIMENT_TEMPORAL_FEASIBILITY_AMENDMENT_20260914_V2R7.md
+    predecessor_release: release_20260914_visdrone_paper_v2r6
+    predecessor_run_name: semuav_visdrone_v2r6
+    predecessor_registered_validation_sequences: 15
+    predecessor_observed_eligible_validation_sequences: 7
+    amended_validation_sequences: 7
+    retained_test_sequences: 15
+    observations_per_sequence: 64
+    validation_trace_realizations: 12
+    amended_validation_fully_paired_scene_trace_cells: 84
+    validation_development_bytes_read: true
+    validation_outcomes_evaluated: false
+    temporal_artifact_written: false
+    cache_build_started: false
+    experiments_1_to_7_started: false
+    protocol_frozen: false
+    untouched_test_accessed: false
+    scientific_contract_changed: true
+
+runtime:
+  pre_validation_runtime_correction_record: PRE_VALIDATION_NATIVE_RECEIVER_RECOVERY_20260921_V2R10.md
+  pre_validation_acceptance_recovery_isolation_record: PRE_VALIDATION_ACCEPTANCE_RECOVERY_ISOLATION_20260921_V2R11.md
+  pre_smoke_predecessor_boundary_routing_correction_record: PRE_SMOKE_PREDECESSOR_BOUNDARY_ROUTING_CORRECTION_20260921_V2R12.md
+  pre_validation_low_evidence_packet_correction_record: PRE_VALIDATION_LOW_EVIDENCE_PACKET_CORRECTION_20260921_V2R13.md
+  # Authorized development-only recovery. The deployment receipt freezes
+  # exactly 132 raw Experiment 1 inference shards / 4,152 rows from the
+  # quiescent v2r9 run. No summary, selection, packet, receiver cache,
+  # Experiment 2+ result, protocol, test artifact, or report is imported.
+  experiment1_recovery:
+    schema: semuav.visdrone-v2r9-exp1-recovery.v1
+    predecessor_release: release_20260920_visdrone_paper_v2r9
+    predecessor_run_name: semuav_visdrone_v2r9
+    imported_scope: raw_experiment1_detector_and_vlm_shards_only
+    derived_results_recomputed: true
+    downstream_results_recomputed: true
+    untouched_test_accessed: false
+  inference_environment_id: release_20260912_v2r3
+  required_inference_python: "/data/Lane Detection Datasets/musta/semuav_vlm/venvs/release_20260912_visdrone_inference_candidate_v2r3/bin/python"
+  candidate_ready_receipt: "/data/Lane Detection Datasets/musta/semuav_vlm/venvs/release_20260912_visdrone_inference_candidate_v2r3/SEMUAV_CANDIDATE_READY.json"
+  candidate_ready_receipt_schema: semuav.visdrone-inference-candidate-environment.v1
+  candidate_ready_status: READY_FOR_DEVELOPMENT_SMOKE_ONLY
+  inference_environment_seal_schema: semuav.visdrone-inference-environment-seal.v1
+  inference_environment_seal_status: SEALED_FOR_SCIENTIFIC_VALIDATION_AND_TEST
+  required_environment_guards:
+    CUDA_VISIBLE_DEVICES: "1"
+    PYTHONDONTWRITEBYTECODE: "1"
+    YOLO_AUTOINSTALL: "false"
+    PIP_NO_INDEX: "1"
+    PIP_NO_INPUT: "1"
+    HF_HUB_OFFLINE: "1"
+    TRANSFORMERS_OFFLINE: "1"
+    SEMUAV_MODELS_LOCAL_ONLY: "1"
+    HF_HUB_CACHE: "/data/Lane Detection Datasets/musta/semuav_vlm/.cache/huggingface"
+    HUGGINGFACE_HUB_CACHE: "/data/Lane Detection Datasets/musta/semuav_vlm/.cache/huggingface"
+    TRANSFORMERS_CACHE: "/data/Lane Detection Datasets/musta/semuav_vlm/.cache/huggingface"
+    HF_MODULES_CACHE: "/data/Lane Detection Datasets/musta/semuav_vlm/.cache/huggingface/modules-v2r13"
+  prohibited_legacy_training_environment: "/data/Lane Detection Datasets/musta/semuav_vlm/venvs/release_20260830"
+  device: cuda:0
+  dtype: bfloat16
+  batch_size: 1
+  num_workers: 8
+  login_node_forbidden: true
+  gpu_energy_scope: gpu_board_nvml
+  warmup_iterations: 5
+  steady_state_repetitions: 3
+
+models:
+  # Prospective pre-validation v2r6 amendment. This metadata is not an active
+  # model entry. The v2r5 Moondream result was an exact-schema feasibility
+  # failure, not an accuracy result, and no v2r5 row may be reused.
+  model_set_amendment:
+    schema: semuav.visdrone-prevalidation-model-set-amendment.v1
+    record: PRE_VALIDATION_MODEL_SET_AMENDMENT_20260914_V2R6.md
+    predecessor_release: release_20260913_visdrone_paper_v2r5
+    predecessor_smoke_status: FAILED_3_OF_4_PASS
+    timing: before_calibration_validation_protocol_freeze_and_test
+    scientific_contract_changed: true
+    retained_vlm_order: [qwen3_vl_2b, smolvlm2_2b, qwen3_vl_8b_upper_bound]
+    registered_vlm_count: 3
+    compact_selection_candidates: [qwen3_vl_2b, smolvlm2_2b]
+    compact_selection_candidate_count: 2
+    upper_bound_reference: qwen3_vl_8b_upper_bound
+    required_runtime_smoke: exact_3_of_3_pass
+    experiment1_general_pipeline_count: 4
+    experiment1_temporal_pipeline_count: 2
+    excluded_models:
+      moondream2:
+        reason: one_call_exact_schema_feasibility_failure
+        predecessor_status: FAIL_SCHEMA
+        accuracy_evaluated: false
+        validation_or_test_outcome_used: false
+        scientific_claims_permitted: false
+  input_policy: common_aspect_preserving_letterbox_then_pinned_native_processor_v1
+  input_size: [768, 768]
+  semantic_architecture: detector_plus_bounded_vlm_verifier_plus_deterministic_host_composer_v2
+  semantic_contract: semuav.visdrone-proposal-decision.v2
+  host_composer_contract: semuav.v1
+  generation_policy:
+    version: semuav.visdrone-generation-policy.v5
+    decision_contract: semuav.visdrone-proposal-decision.v2
+    strategy_by_model:
+      qwen3_vl_2b: qwen_open_brace_assistant_continuation
+      qwen3_vl_8b_upper_bound: qwen_open_brace_assistant_continuation
+      smolvlm2_2b: smol_native_double_quote_assistant_prefix
+    qwen_open_brace_assistant_continuation:
+      assistant_prefill: "{"
+      assistant_prefill_authorship: host_transport_scaffold
+      assistant_content_shape: typed_text_block_list
+      add_generation_prompt: false
+      continue_final_message: true
+    smol_native_double_quote_assistant_prefix:
+      assistant_prefill: '{"'
+      assistant_prefill_authorship: host_transport_scaffold
+      assistant_content_shape: native_user_only_render_plus_text_prefix
+      add_generation_prompt: true
+      continue_final_message: false
+      chat_template_tokenize: false
+      processor_retokenize_with_image: true
+    proposal_context:
+      schema: 2
+      coordinate_plane: processed_model_input
+      coordinate_max: 4095
+      lower_edge_quantization: floor
+      upper_edge_quantization: ceil
+      row: [proposal_id, label, x1, y1, x2, y2]
+    decision_wire:
+      keys:
+        e: sufficient_evidence
+        a: accepted_proposal_ids
+        l: limited_visibility_proposal_ids
+      host_normalization: expand_short_keys_before_validation_and_composition
+    generation:
+      do_sample: false
+      max_new_tokens: 256
+      retry_count: 0
+    decode:
+      generated_continuation_only: true
+      skip_special_tokens: true
+      clean_up_tokenization_spaces: false
+    transport_validation:
+      strict_exact_json_object: true
+      strip_markdown_fences: false
+      extract_substring: false
+      repair_response: false
+    sha256: 1f73c410bf46c1012a66c204a574db47ff918b1c75f091db42196ef47ff69407
+  runtime_smoke_canary: acceptance/visdrone_runtime_smoke_canary_v1.json
+  runtime_smoke_canary_sha256: ba22e0083657e7a5ad454e71586a0d31485a5216afbd2f8b73ce3aa599d1b88d
+  # The v2r13 source release reuses already-frozen v1 artifacts by read-only
+  # reference. Before smoke, the notebook hashes only a restricted train-safe
+  # inventory: the registered train sample plus exact model, detector, and
+  # train-only feature-head provenance. It defers the full development-bundle
+  # and calibration/validation-sample verification until after the three-model
+  # smoke and scientific-use environment seal. It never retrains or rewrites
+  # these historical assets.
+  reused_v1_artifacts:
+    receipt_schema: semuav.reused-v1-frozen-artifacts.v1
+    source_run_name: semuav_visdrone_v1
+    source_frozen_input_dir: "${SEMUAV_REUSED_V1_FROZEN_INPUT_DIR:-/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v1/frozen_inputs}"
+    expected_sha256:
+      model_lock: aa7b6cc93c7783714ca5b1f1f80a776567078771db4d73ad92de941bde0c3de8
+      detector_training_environment_fingerprint: 87cb1b1bdd7e98a9eb59853fcbc91bc4cf22235675017427cab293d4437eb4a4
+      detector_training_pip_freeze: b9d550396e7d037d03d57ed9ecaf62a4b4e76f761760766e6a4beb63186fb825
+      detector_training_plan: 949ab79ce4d067edb8d550ea5f57a945ebb5ea832682c44ec0fa4c20794d1031
+      detector_training_receipt: e2f0349115b4749faaeb0b04a8b7eee3e1d01a94649743ef6d127966c8795fe7
+      feature_head_lock: 83b99ec9435825443c2e111bc01908332f11828742d093926ecf86b2588d3068
+      registered_train_sample: f6d852e940f7968dea908180c0f32ca8229852287cc23ae2f7ff72dfc70dae6f
+      registered_train_sampling_audit: 3614e8dc586d016b89dca0edfaa392f3196723e53a921b5e170f2d3bfb984621
+  detector:
+    backend: ultralytics
+    checkpoint: "${SEMUAV_DETECTOR_CHECKPOINT:-/data/Lane Detection Datasets/musta/semuav_vlm/.cache/visdrone_paper/detector_training/visdrone_det_registered/weights/best.pt}"
+    checkpoint_sha256: "${SEMUAV_DETECTOR_SHA256:-a66356321ca834056f7945ecba2c121a6021999796beb0969e2e34232d79902a}"
+    training_receipt: "${SEMUAV_DETECTOR_TRAINING_RECEIPT:-/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v1/frozen_inputs/DETECTOR_TRAINING_RECEIPT.json}"
+    tracker: botsort.yaml
+    image_size: 768
+    confidence: 0.001
+    iou: 0.70
+    max_detections: 300
+    seed: 20260823
+  proposal_policy:
+    top_k: 32
+    minimum_confidence: 0.05
+    ordering: confidence_descending_label_geometry_track
+  vlms:
+    - id: qwen3_vl_2b
+      backend: qwen3_vl
+      repo: Qwen/Qwen3-VL-2B-Instruct
+      revision: "${SEMUAV_QWEN_REVISION:-REQUIRED_40_HEX_COMMIT}"
+      quantization: none
+      dtype: bfloat16
+    - id: smolvlm2_2b
+      backend: smolvlm2
+      repo: HuggingFaceTB/SmolVLM2-2.2B-Instruct
+      revision: "${SEMUAV_SMOLVLM_REVISION:-REQUIRED_40_HEX_COMMIT}"
+      quantization: none
+      dtype: bfloat16
+  upper_bound:
+    id: qwen3_vl_8b_upper_bound
+    backend: qwen3_vl
+    repo: Qwen/Qwen3-VL-8B-Instruct
+    revision: "${SEMUAV_UPPER_BOUND_REVISION:-REQUIRED_40_HEX_COMMIT}"
+    quantization: none
+    dtype: bfloat16
+  max_new_tokens: 256
+  feature_baseline:
+    encoder: torchvision/resnet50
+    encoder_revision: IMAGENET1K_V2
+    split_layer: layer3
+    receiver_head: "${SEMUAV_FEATURE_RECEIVER_HEAD:-/data/Lane Detection Datasets/musta/semuav_vlm/outputs/visdrone_paper/semuav_visdrone_v1/frozen_inputs/feature_head/FEATURE_HEAD_LOCK.json}"
+    receiver_head_revision: "${SEMUAV_FEATURE_HEAD_SHA256:-83b99ec9435825443c2e111bc01908332f11828742d093926ecf86b2588d3068}"
+    quantization: [int8, int4]
+
+payloads:
+  wire_format: cbor
+  mtu_bytes: 1200
+  image_codecs: [jpeg, webp, avif]
+  image_qualities: [20, 35, 50, 70, 90]
+  image_scales: [0.25, 0.5, 0.75, 1.0]
+  levels: [L0, L1, L2, L3, L4, L5]
+  video_codec: libx264
+  video_crf: [23, 35]
+  video_fps: 5
+
+network:
+  trace_semantics: raw_service
+  # A 64-observation 5 Hz episode has its last capture at 12.6 s. Eighteen
+  # measured seconds cover the 2 s action deadline and default 2 s state-expiry
+  # grace. Link dynamics occupy 0--12 s; 12--18 s repeats the terminal state.
+  temporal_trace_duration_us: 18000000
+  temporal_trace_dynamic_us: 12000000
+  temporal_trace_terminal_hold_us: 6000000
+  temporal_trace_segment_us: 1000000
+  temporal_state_expiry_grace_us: 2000000
+  selective_repeat_window_fragments: 512
+  max_retries: 2
+  static_rate_mbps: [0.1, 0.25, 0.5, 1, 2, 5, 10, 20]
+  rtt_ms: [20, 80, 200]
+  loss: [0.0, 0.01, 0.05, 0.15]
+  static_loss_models: [iid, gilbert_elliott]
+  static_burst_recovery_probability: 0.2
+  static_burst_slot_ms: 100
+  static_jitter_ms: [0, 10]
+  queue_kb: [32, 128, 512]
+  # H1 inference uses at least 30 independent visual groups. The observation
+  # cap applies to natural source frames and retains all three profile copies.
+  static_min_independent_groups: 30
+  static_max_groups_per_dataset: 30
+  static_max_observations_per_group: 2
+  static_max_variants_per_mode_source: 3
+  held_out_trace_realizations: 30
+  validation_trace_realizations: 12
+  validation_static_min_independent_groups: 15
+  # Exact amended temporal-validation Cartesian design: seven independently
+  # selected MOT sequences times twelve validation trace realizations.
+  validation_fully_paired_scene_trace_cells: 84
+  held_out_trace_families: [sudden_drop, recovery, ramp, markov, fading, outage]
+
+controller:
+  minimum_dwell_us: 2000000
+  hysteresis_margin: 0.04
+  vlm_trigger_risk: 0.45
+  vlm_trigger_uncertainty: 0.35
+  risk_escalation: 0.70
+  uncertainty_escalation: 0.35
+  byte_weight: 0.02
+  energy_weight: 0.08
+  evidence_weight: 0.30
+  deadline_weight: 1.0
+  policies: [fixed_modes, adaptive_image, adaptive_semantic, detector_only, channel_only, mission_only, deadline_greedy, channel_mission, proposed_full, heuristic_lookahead_reference]
+
+evaluation:
+  primary_endpoint: correct_timely_action
+  # These are frozen rate constraints, not post-hoc fitted values. Energy is
+  # deliberately scoped to sender plus ground-native-receiver GPU-board compute
+  # measured by NVML. Radio, CPU, and total-system energy remain outside this
+  # VisDrone study's claims; sender and receiver components are reported apart.
+  primary_wire_budget_bytes_per_s: 250000
+  primary_energy_budget_j_per_s: 80.0
+  energy_claim_scope: combined_sender_and_ground_gpu_board_nvml_compute_only_excludes_radio_system
+  radio_energy_included: false
+  false_alert_limit: 0.05
+  bootstrap_repetitions: 10000
+  primary_margin: 0.03
+  natural_test_units: 30
+  mission_priority_positive_units: 140
+  mission_priority_negative_units: 73
+  fully_paired_scene_trace_cells: 500
+  minimum_power: 0.80
+  h2_matched_budget_relative_tolerance: 0.05
+  max_vlm_full_path_p95_latency_ms: 1000
+  max_vlm_peak_memory_mb: 12000
+  min_schema_valid_rate: 0.98
+  min_semantic_valid_rate: 0.98
+  min_priority_recall: 0.85
+  minimum_vlm_context_gain: 0.03
+  # Calibration is fitted on independent visual groups.  The number of
+  # incorrect groups is reported as a precision diagnostic, but is not a
+  # feasibility gate because the bounded calibration design contains only 30
+  # groups.  Gate decisions use the registered group-bootstrap ECE upper
+  # confidence bounds instead.
+  minimum_calibration_independent_groups: 30
+  calibration_fitting_estimand: visual_group_equal_temperature_nll_v1
+  calibration_incorrect_group_diagnostic_target: 50
+  calibration_bootstrap_repetitions: 2000
+  calibration_bootstrap_upper_quantile: 0.95
+  calibration_ece_upper_limit: 0.05
+  calibration_priority_ece_upper_limit: 0.10
+  h4_matched_coverage: 0.10
+  # This frozen threshold is shared by controller summaries, Exp. 5,
+  # matched-coverage H4 reduction, and every raw-trial indicator.
+  h4_high_confidence_threshold: 0.80
+  model_selection:
+    # Pre-validation v2 amendment: score the composed detector + bounded VLM
+    # verifier + deterministic host-composer pipeline. This is not a claim
+    # about free-form VLM packet authorship.
+    estimand: group_equal_critical_action_plus_object_exact_v2
+    weights:
+      critical_action_accuracy: 0.50
+      objects_exact_accuracy: 0.50
+    tie_break:
+      - selection_score_desc
+      - critical_action_accuracy_desc
+      - objects_exact_accuracy_desc
+      - full_path_latency_p95_ms_asc
+      - model_id_asc
+  target_memory_limit_mb: 8000
+  hypotheses: [H1, H2, H3, H4]
+  expected_not_estimable_hypotheses: [H2, H3]
+  expected_not_estimable_reasons:
+    H2: bounded_15_sequence_by_30_trace_temporal_design_has_15_groups_and_450_group_trace_cells_below_30_and_500_minima
+    H3: bounded_15_sequence_temporal_visdrone_design_below_140_positive_and_73_negative_group_minima
+  not_applicable_hypotheses: [H5]
+
+hardware:
+  target: deferred_jetson_class
+  hardware_id: "${SEMUAV_TARGET_HARDWARE_ID:-NOT_PROVIDED}"
+  target_log: "${SEMUAV_TARGET_LOG:-NOT_PROVIDED.jsonl}"
+  thermal_limit_c: 82
+  radio_tx_j_per_byte: 0.0
+  radio_rx_j_per_byte: 0.0
+  netem_manual_sudo: true

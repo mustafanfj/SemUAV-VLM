@@ -1,0 +1,53 @@
+schema_version: 1
+study_id: semuav_vlm_full_study
+profile: dry_run
+seed: 20260823
+seeds: [20260823, 20260829, 20260907]
+allow_synthetic: true
+
+paths:
+  project_root: ..
+  data_root: .fixtures
+  output_root: outputs/dry_run
+  cache_root: .cache/dry_run
+  annotations: null
+  test_annotations: null
+  split_manifest: null
+  channel_traces: null
+  telemetry_manifest: null
+
+datasets:
+  integration_fixture:
+    adapter: synthetic
+    root: synthetic
+    mission: urban
+    enabled: true
+    required: true
+    synthetic: true
+    options:
+      n_samples: 120
+      group_size: 6
+      critical_fraction: 0.20
+
+split:
+  seed: 20260823
+  ratios:
+    train: 0.60
+    calibration: 0.10
+    validation: 0.10
+    test: 0.20
+  leakage_keys: [split_group, flight_id, sequence_id, location_id, event_id]
+  strata: [dataset, mission, critical_event]
+  require_frozen_manifest: false
+  min_test_units: 1
+  min_critical_test_events: 0
+
+annotations:
+  enabled: false
+  required_annotators: 2
+  require_blinding: true
+  require_manifest_coverage: false
+  require_adjudication_on_disagreement: true
+  min_observed_agreement: 0.70
+  min_chance_corrected_agreement: 0.40
+  min_rare_chance_corrected_agreement: 0.70
