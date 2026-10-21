@@ -9,9 +9,11 @@ six representation levels, from a 1 kB alert to the full image. A deadline-aware
 transport layer delivers it over a constrained uplink, and a native ground receiver
 turns it into NO ACTION, REVIEW, or RESPOND.
 
+![SemUAV-VLM pipeline: observe, ground, choose, deliver, act](figures/semuav_pipeline.png)
+
 This repository contains the complete, pre-registered study code for the paper:
 
-> M. Al Juboori *et al.*, "SemUAV-VLM: ...," *IEEE Open Journal of Vehicular Technology*, 2026 (under review).
+> M. Al Juboori, T. Almazrouei, F. Ullah, H. El-Sayed and M. Ur Rehman, "SemUAV-VLM: Deadline-Aware Semantic Communication for UAV Vision over Constrained Wireless Links," *IEEE Open Journal of Vehicular Technology*, 2026 (under review).
 
 ## Headline results (VisDrone validation set)
 
